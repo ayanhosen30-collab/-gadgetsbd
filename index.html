@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>gadgets — gadgets.net.bd</title>
+<!-- Minimalist Orange & Black Motion Cart Brand Mark Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 100'%3E%3Cpath d='M94 14H63c-17 0-28 11-28 26s11 26 28 26h24l-4 14H51c-5 0-8-3-10-8L31 42H18' fill='none' stroke='%2316161a' stroke-width='11' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M63 41h27l-6 23H46l-9-28H24' fill='none' stroke='%23ff6a00' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cline x1='6' y1='48' x2='24' y2='48' stroke='%23ff6a00' stroke-width='5.5' stroke-linecap='round'/%3E%3Cline x1='2' y1='57' x2='27' y2='57' stroke='%23ff6a00' stroke-width='5.5' stroke-linecap='round'/%3E%3Cline x1='10' y1='66' x2='30' y2='66' stroke='%23ff6a00' stroke-width='5.5' stroke-linecap='round'/%3E%3Ccircle cx='51' cy='88' r='7' fill='%2316161a'/%3E%3Ccircle cx='77' cy='88' r='7' fill='%2316161a'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#fff;
+  --ink:#16161a;
+  --mut:#6b6b76;
+  --line:#e8e8ee;
+  --card:#f6f6f9;
+  --red:#ff6a00;
+  color-scheme:light dark;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#121215;
+    --ink:#f3f3f6;
+    --mut:#9a9aa6;
+    --line:#2a2a31;
+    --card:#1c1c21;
+  }
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:138px}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 "Hind Siliguri",system-ui,sans-serif;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;color:inherit;background:none}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.w{max-width:1280px;margin:0 auto;padding:0 20px}
+
+/* Sticky Header & Brand Logo */
+header{position:sticky;top:0;left:auto;right:auto;z-index:30;background:var(--bg);box-shadow:0 1px 0 var(--line);transition:background .3s,box-shadow .3s}
+.hb{display:flex;align-items:center;flex-wrap:wrap;position:relative;gap:10px 14px;padding-top:10px;padding-bottom:4px;justify-content:flex-start;min-height:0}
+.logo{order:1;display:inline-flex;align-items:center;gap:10px;text-transform:lowercase}
+.lm-svg{width:62px;height:40px;flex:none;display:block}
+.lm{width:42px;height:36px;object-fit:contain;flex:none}
+.logo span{font:800 25px Montserrat,sans-serif;letter-spacing:-.02em;background:linear-gradient(90deg,var(--ink) 45%,var(--red));-webkit-background-clip:text;background-clip:text;color:transparent;text-transform:lowercase}
+
+/* Search Bar */
+.sr{order:2;margin:0;flex:1;max-width:740px;display:flex;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:30px;padding:0 5px 0 18px;height:44px}
+.sr:focus-within{border-color:var(--red)}
+.sr input{flex:1;min-width:0;background:none;border:0;outline:0;color:var(--ink);font:inherit}
+.sc,.sg{position:relative;flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;overflow:hidden;color:var(--ink)}
+.sc .ln{position:absolute;left:7px;right:7px;height:2px;background:var(--red);box-shadow:0 0 8px var(--red);animation:scan 1.6s ease-in-out infinite alternate}
+@keyframes scan{from{top:8px}to{top:26px}}
+.sg{background:var(--ink);color:var(--bg)}
+
+/* Header Icons & Account Dropdown */
+.hi{order:3;margin-left:auto;display:flex;align-items:center;gap:2px}
+.hi>button,.ac>button{position:relative;padding:8px;display:flex;align-items:center;gap:6px;color:var(--ink);border-radius:20px}
+.hi button b{position:absolute;top:0;right:-2px;min-width:18px;height:18px;border-radius:9px;background:var(--red);color:#fff;font-size:11px;display:grid;place-items:center;padding:0 4px}
+.hl2{display:none}
+@media (min-width:701px){.hl2{display:inline;font-weight:500}.hi>#wb b,.hi>#cb b{position:static}}
+.ac{position:relative}
+.ac:hover .dd{display:block}
+.dd{display:none;position:absolute;right:0;top:calc(100% - 2px);width:250px;background:var(--bg);border:1px solid var(--line);border-radius:10px;box-shadow:0 14px 34px rgba(0,0,0,.2);padding:8px;z-index:45}
+.dd.on{display:block}
+.dd>button{display:block;width:100%;text-align:left;padding:12px;border-radius:6px}.dd>button:hover{background:var(--card)}
+.dd button.pri{background:var(--red);color:#fff;margin-bottom:4px}.dd button.pri:hover{filter:brightness(1.08);background:var(--red)}
+.dd hr{border:0;border-top:1px solid var(--line);margin:6px 0}
+.lw{position:relative}.lgb{display:flex!important;justify-content:space-between;align-items:center;width:100%;text-align:left;padding:12px;border-radius:6px}.lgb:hover{background:var(--card)}.lgb span{color:var(--mut);font-size:13px}
+.ls{display:none;padding:4px 0 0 12px}.lw.open .ls{display:block}
+.ls button{display:block;width:100%;text-align:left;padding:10px 12px;border-radius:6px}.ls button:hover,.ls button.on{background:var(--card)}
+@media (min-width:701px) and (hover:hover){.ls{position:absolute;right:calc(100% - 2px);top:0;width:150px;padding:8px;background:var(--bg);border:1px solid var(--line);border-radius:10px;box-shadow:0 14px 34px rgba(0,0,0,.2)}.lw:hover .ls{display:block}}
+
+/* Primary Navigation: Home + 7 Main Categories, each with a straight vertical dropdown right beneath */
+.nv{order:4;flex:1 0 100%;display:flex;gap:4px;align-items:center;padding-bottom:6px;flex-wrap:wrap}
+.nl{padding:8px 11px;font-weight:500;border-radius:6px;display:inline-flex;align-items:center;gap:5px;color:var(--ink);white-space:nowrap;font-size:14px}
+.nl:hover,.nd.on .nl{background:var(--card);color:var(--red)}
+.nd{position:relative;display:inline-flex;align-items:center}
+.sd{
+  display:none;
+  position:absolute;
+  left:0;
+  top:100%;
+  flex-direction:column;
+  min-width:220px;
+  width:max-content;
+  max-width:290px;
+  background:var(--bg);
+  border:1px solid var(--line);
+  border-radius:10px;
+  box-shadow:0 14px 32px rgba(0,0,0,.18);
+  padding:6px;
+  z-index:55;
+}
+.nd.on .sd{display:flex}
+@media (hover:hover){.nd:hover .sd{display:flex}}
+.sd button,.sd a{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  width:100%;
+  text-align:left;
+  padding:8px 12px;
+  border-radius:6px;
+  font-size:13.5px;
+  color:var(--ink);
+  white-space:normal;
+  line-height:1.3;
+}
+.sd button:hover,.sd a:hover{background:var(--card);color:var(--red);font-weight:500}
+.sd .sd-all{margin-top:4px;border-top:1px solid var(--line);padding-top:9px;font-weight:600;color:var(--red)}
+
+/* Hero Slider */
+.hero{position:relative;height:clamp(400px,50vw,540px);min-height:0;margin:14px auto 0;max-width:1280px;width:calc(100% - 32px);border-radius:24px;overflow:hidden;background:#111}
+.sl{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease;display:flex;align-items:stretch}
+.sl.on{opacity:1}
+.sl::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.38),transparent 75%)}
+.sl .bg{position:absolute;inset:-4%;transform:scale(1.08);transition:transform 7s ease-out}
+.sl .bg::after{content:"";position:absolute;width:60%;aspect-ratio:1;right:-8%;top:-24%;border-radius:50%;background:radial-gradient(circle,var(--g,rgba(255,106,0,.28)),transparent 65%)}
+.sl.on .bg{transform:scale(1)}
+.hero .t{position:relative;z-index:2;color:#fff;display:flex;flex-direction:column;align-items:flex-start;align-self:stretch;padding:clamp(34px,7vw,84px) clamp(22px,5vw,72px) clamp(24px,4vw,44px);margin:0;max-width:none;width:100%}
+.t h1{font:800 clamp(30px,5.4vw,64px)/1.04 Montserrat,sans-serif;max-width:10em}
+.t p{margin:14px 0 0;max-width:27em;font-size:clamp(15px,2vw,19px);opacity:.92}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:14px 30px;border-radius:4px;font-weight:500;transition:transform .2s,filter .2s}
+.btn:hover{filter:brightness(1.08);transform:translateY(-2px)}
+.hero .t .btn{margin-top:auto;padding:15px 34px;border-radius:999px;box-shadow:0 10px 26px rgba(255,106,0,.4)}
+.hn{position:absolute;top:50%;transform:translateY(-50%);z-index:4;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;font-size:30px;line-height:1;display:grid;place-items:center;opacity:0;transition:opacity .25s,background .2s}
+.hero:hover .hn,.hn:focus-visible{opacity:1}.hn:hover{background:rgba(255,255,255,.34)}.hn.pv{left:16px}.hn.nx{right:16px}
+@media (hover:none){.hn{opacity:.85;width:38px;height:38px;font-size:24px}.hn.pv{left:8px}.hn.nx{right:8px}}
+.dots{display:none}
+
+/* Category Rails & Product Cards */
+h2.h{font:800 clamp(24px,3.4vw,38px) Montserrat,sans-serif;margin:0}
+.ch2{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:44px 0 6px}
+.ctl{display:flex;gap:8px;align-items:center}.va{color:var(--red);font-weight:600;padding:8px 6px}
+.rwp{position:relative}
+.rb{position:absolute;top:calc(50% - 14px);transform:translateY(-50%);z-index:5;width:46px;height:46px;border-radius:50%;background:var(--bg);color:var(--ink);box-shadow:0 6px 20px rgba(0,0,0,.25);font-size:28px;line-height:1;display:grid;place-items:center;opacity:0;transition:opacity .25s,transform .2s}
+.rb.l{left:-8px}.rb.r{right:-8px}.rwp:hover .rb{opacity:1}.rb:hover{background:var(--ink);color:var(--bg)}
+@media (hover:none),(max-width:700px){.rb{display:none}}
+.rail{display:flex;gap:14px;overflow-x:auto;padding:14px 2px 30px;scrollbar-width:none;-webkit-overflow-scrolling:touch}.rail::-webkit-scrollbar{display:none}
+.pc{position:relative;background:var(--card);border-radius:20px;overflow:hidden;cursor:pointer;transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s;flex:0 0 calc((100% - 70px)/6)}
+.pc:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(0,0,0,.16);z-index:2}
+.pcw{position:relative}
+.im{aspect-ratio:4/4;display:grid;place-items:center;position:relative;overflow:hidden}
+.im img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.im svg{width:38%;opacity:.82}
+.dc{position:absolute;top:10px;left:10px;background:var(--red);color:#fff;font-size:12px;font-weight:600;padding:2px 10px;border-radius:999px}
+.hw{position:absolute;top:8px;right:8px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;color:#222;z-index:2}
+.hw svg{width:18px;fill:none;stroke:currentColor;stroke-width:2}.hw.on{color:var(--red)}.hw.on svg{fill:currentColor}
+.ob{position:absolute;inset:0;display:flex;align-items:flex-end;pointer-events:none}
+.ob span{margin:0 14px 14px;width:calc(100% - 28px);background:var(--red);color:#fff;text-align:center;padding:11px;border-radius:999px;font-weight:500;opacity:0;transform:translateY(12px);transition:.3s}
+.pc:hover .ob span{opacity:1;transform:none}
+.ed{position:absolute;left:8px;top:44px;z-index:3;background:#16161a;color:#fff;padding:4px 12px;border-radius:999px;font-size:12px}
+.pi{padding:12px 14px 14px}
+.pn{font-weight:500;line-height:1.3;min-height:2.6em}
+.pr{margin:4px 0 10px;font-weight:600}.pr s{color:var(--mut);font-weight:400;margin-left:6px;font-size:13px}
+.ba{display:grid;gap:6px}
+.pc .a{width:100%;border:1px solid var(--ink);padding:9px;border-radius:999px;font-weight:500;transition:background .2s,color .2s}
+.pc .a:hover{background:var(--ink);color:var(--bg)}
+.pc .o2{background:var(--red);border-color:var(--red);color:#fff}
+.pc .o2:hover{background:var(--red);color:#fff;filter:brightness(1.08)}
+
+/* Footer */
+footer{margin-top:80px;background:#fff;border-top:3px solid #ff6a00;color:#3a3f4b;padding:56px 0 28px}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:36px}
+.fg h4{color:#12151d;font-weight:600;margin-bottom:14px}.fg li{list-style:none;margin:8px 0}.fg ul{padding:0}
+.fg a:hover{color:var(--red)}
+.fl{display:inline-flex;align-items:center;gap:10px;font:800 28px Montserrat,sans-serif;letter-spacing:-.02em;background:linear-gradient(90deg,#12151d 45%,#ff6a00);-webkit-background-clip:text;background-clip:text;color:transparent;text-transform:lowercase}
+footer p,.hc span{color:#5b6070!important}
+.hc{display:block;width:100%;text-align:left;background:#fff6ee;border:1px solid #ffd4b0;border-radius:8px;padding:14px;margin-bottom:12px}
+.hc b{display:block;color:#12151d;font-weight:500}.hc span{font-size:13px}
+.so{display:flex;gap:10px;margin-top:20px}.so a{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;transition:transform .2s}.so a:hover{transform:translateY(-3px)}.so svg{width:20px;height:20px;fill:#fff}
+.cp{border-top:1px solid #e6e8ee;margin-top:36px;padding-top:20px;font-size:13px;color:#6b7080;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+/* Modals, Order & Checkout Form, Color Selector, Non-Dropdown Payment Cards */
+.ov{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.58);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;padding:20px}
+.ov.on{display:flex}
+.md{background:var(--bg);width:100%;max-width:980px;max-height:92vh;overflow:auto;border-radius:14px;position:relative;animation:up .28s ease;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+@keyframes up{from{opacity:0;transform:translateY(18px)}}
+.x{position:absolute;top:10px;right:12px;font-size:28px;line-height:1;z-index:3;width:40px;height:40px;border-radius:50%;background:var(--card)}
+.x:hover{background:var(--line)}
+.pg{display:grid;grid-template-columns:1.05fr 1fr;gap:28px;padding:24px}
+.zm{position:relative;overflow:hidden;border-radius:10px;aspect-ratio:3/4;cursor:zoom-in}
+.zm .im{position:absolute;inset:0;aspect-ratio:auto;transition:transform .15s}
+@media (hover:hover){.zm:hover .im{transform:scale(2)}}
+.th{display:flex;gap:10px;margin-top:10px}.th button{width:64px;aspect-ratio:1;border-radius:8px;overflow:hidden;border:2px solid transparent;padding:0}.th button.on{border-color:var(--red)}
+.th .im{aspect-ratio:1;height:100%}.th svg{width:50%}
+
+.fm .name-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fm label{display:block;font-weight:600;margin:13px 0 6px;font-size:13.5px}
+.fm input,.fm select,.fm textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}
+.fm input:focus,.fm select:focus,.fm textarea:focus{border-color:var(--red);outline:none}
+
+.clr-list,.zone-list{display:flex;gap:8px;flex-wrap:wrap}
+.clr-btn,.zone-btn{display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border:1px solid var(--line);border-radius:999px;font-size:13.5px;font-weight:500;background:var(--card);transition:.18s}
+.clr-btn:hover,.zone-btn:hover{border-color:var(--ink)}
+.clr-btn.on,.zone-btn.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.clr-dot{width:12px;height:12px;border-radius:50%;border:1px solid rgba(128,128,128,.45);flex:none}
+
+/* Non-dropdown selectable Payment Cards: Cash on Delivery, bKash, Nagad */
+.pay-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:4px}
+.pay-opt{border:1.5px solid var(--line);border-radius:10px;padding:10px 8px;text-align:center;background:var(--card);transition:.18s;display:flex;flex-direction:column;align-items:center;gap:2px}
+.pay-opt strong{font-size:13.5px;font-weight:700}
+.pay-opt small{font-size:11.5px;color:var(--mut)}
+.pay-opt.on{border-color:var(--red);background:rgba(255,106,0,.1);color:var(--ink)}
+.pay-opt.on small{color:var(--red);font-weight:600}
+.pay-box{margin-top:10px;padding:12px 14px;border-radius:10px;border:1px dashed var(--red);background:var(--card)}
+.pay-num-row{display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 11px;margin:8px 0}
+.pay-num-row code{font-family:Montserrat,monospace;font-weight:700;font-size:14px;color:var(--red)}
+.cp-btn{font-size:12px;font-weight:600;background:var(--ink);color:var(--bg);padding:5px 10px;border-radius:6px}
+.cp-btn:hover{background:var(--red);color:#fff}
+
+.qt{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:8px;background:var(--card)}.qt button{width:38px;height:38px;font-size:18px;font-weight:600}.qt span{min-width:42px;text-align:center;font-weight:700}
+.sm{background:var(--card);border-radius:10px;padding:12px 14px;margin:16px 0;font-size:14px}
+.sm div{display:flex;justify-content:space-between;margin:4px 0}.sm .tt{font-weight:700;font-size:17px;border-top:1px solid var(--line);padding-top:8px;margin-top:6px}
+.big{width:100%;background:var(--red);color:#fff;padding:15px;border-radius:8px;font-weight:700;font-size:16px}
+.big:hover{filter:brightness(1.06)}
+.big:disabled{opacity:.4}
+.nt{font-size:13px;color:var(--mut);margin-top:10px}
+.sb{display:none}
+.tst{position:fixed;left:50%;bottom:24px;transform:translate(-50%,40px);background:var(--ink);color:var(--bg);padding:11px 20px;border-radius:30px;opacity:0;transition:.3s;z-index:80;pointer-events:none;font-weight:500}
+.tst.on{opacity:1;transform:translate(-50%,0)}
+.hl{padding:24px;max-width:520px}.hl h3{font:800 20px Montserrat,sans-serif;margin-bottom:12px}
+.msgs{height:240px;overflow:auto;background:var(--card);border-radius:8px;padding:12px;margin-bottom:10px}
+.msgs p{margin:6px 0;padding:8px 12px;border-radius:10px;max-width:85%;background:var(--bg)}.msgs p.u{margin-left:auto;background:var(--red);color:#fff}
+.hl form{display:flex;gap:8px}.hl input{flex:1;padding:12px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:inherit}
+#md:has(.pn2){max-width:560px}
+.pn2{padding:26px 22px 22px}.pn2 h3{font:800 22px Montserrat,sans-serif;margin-bottom:14px;padding-right:40px}
+.rw{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.rm{width:56px;border-radius:6px;overflow:hidden}.rm .im{aspect-ratio:3/4}.rm svg{width:60%}
+.ra{display:flex;gap:6px}.ra .btn{padding:8px 14px;font-size:14px}.rx{border:1px solid var(--line);padding:6px 12px;border-radius:4px;font-size:18px}
+.ch{display:inline-block;background:var(--card);padding:2px 10px;border-radius:12px;font-size:13px}
+.sx{position:relative;border-radius:8px;overflow:hidden;background:var(--card);display:grid;place-items:center}.sx img{max-width:100%;max-height:300px;display:block}
+.ln2{position:absolute;left:0;right:0;height:3px;background:var(--red);box-shadow:0 0 14px var(--red);animation:sc2 1.4s linear infinite}@keyframes sc2{from{top:0}to{top:100%}}
+#ov:has(.cd){justify-content:flex-end;align-items:stretch;padding:0}
+#md:has(.cd){max-width:400px;max-height:none;height:100%;border-radius:0;display:flex;flex-direction:column;animation:sr .3s ease}
+@keyframes sr{from{transform:translateX(100%)}}
+.cd{display:flex;flex-direction:column;height:100%}.cdh{display:flex;justify-content:space-between;align-items:center;padding:14px 12px 14px 20px;border-bottom:1px solid var(--line)}.cdh h3{font:800 20px Montserrat,sans-serif}.x2{font-size:28px;line-height:1;width:40px;height:40px}
+.cdb{flex:1;overflow:auto;padding:6px 20px}.cdf{padding:16px 20px calc(16px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line)}.cd .ra .btn{display:none}
+.gb{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;border:1px solid var(--line);border-radius:6px;padding:12px;font-weight:500;background:var(--bg)}.gb:hover{background:var(--card)}.gb svg{width:20px;height:20px}
+.or{display:flex;align-items:center;gap:12px;color:var(--mut);font-size:13px;margin:16px 0 2px}.or::before,.or::after{content:"";flex:1;border-top:1px solid var(--line)}
+.pw{position:relative}.pw input{padding-right:70px}.pw button{position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--mut);padding:6px}
+#md:has(.op){max-width:980px}
+.op{padding:26px 22px 30px}.op h3{font:800 24px Montserrat,sans-serif;margin-bottom:6px;padding-right:44px}.op h4{font:800 19px Montserrat,sans-serif;margin:32px 0 14px}
+.oc{border:1px solid var(--line);border-radius:18px;padding:14px;margin-top:12px;background:var(--card)}
+.oh{display:grid;grid-template-columns:56px 1fr auto;gap:12px;align-items:center}
+.stp{display:flex;margin:16px 0 4px}.stp span{flex:1;font-size:12px;color:var(--mut);text-align:center;position:relative;padding-top:20px}
+.stp i{position:absolute;top:0;left:50%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:var(--line);z-index:1}
+.stp span::before{content:"";position:absolute;top:5px;left:-50%;right:50%;height:2px;background:var(--line)}.stp span:first-child::before{display:none}
+.stp span.on{color:var(--ink);font-weight:500}.stp span.on i,.stp span.on::before{background:var(--red)}
+.oa{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px}
+.rg{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.mn{background:var(--card);border-radius:18px;padding:10px;display:flex;flex-direction:column}
+.mi{position:relative;border-radius:12px;overflow:hidden;margin-bottom:8px}.mi .im{aspect-ratio:1}
+.mn .pn{font-size:14px;min-height:2.6em}.mn .pr{margin:2px 0 8px}
+.mn .a{margin-top:auto;border:1px solid var(--ink);padding:9px;border-radius:999px;font-weight:500}.mn .a:hover{background:var(--ink);color:var(--bg)}
+.adb{position:fixed;left:10px;bottom:10px;z-index:90;display:flex;gap:6px;flex-wrap:wrap;align-items:center;background:#16161a;color:#fff;padding:8px 10px;border-radius:14px;max-width:calc(100% - 20px);font-size:13px}
+.adb button{background:#2a2a31;color:#fff;padding:6px 10px;border-radius:8px}
+@media (max-width:1100px){
+  .rail .pc{flex-basis:calc((100% - 42px)/4)}
+}
+@media (max-width:1000px){
+  .rail .pc{flex-basis:calc((100% - 28px)/3)}
+  .fg{grid-template-columns:1fr 1fr}
+}
+@media (max-width:900px){.rg{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:700px){
+  .hb{gap:8px 2px;padding-top:8px}.logo span{font-size:21px}.lm-svg,.lm{width:50px;height:32px}.logo{margin-right:auto}.hi{order:2;margin-left:0}.sr{order:3;flex:1 0 100%;max-width:none;height:44px}
+  #an{display:none}.hi>button,.ac>button{padding:6px}
+  .nv{padding-bottom:8px;gap:4px;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;position:relative}
+  .nv::-webkit-scrollbar{display:none}
+  .nd{position:static}
+  .sd{left:0;right:auto;min-width:210px;max-width:270px;max-height:62vh;overflow:auto}
+  .hero{height:460px;width:calc(100% - 24px);border-radius:20px;margin-top:10px}
+  .hero .t h1{font-size:clamp(28px,8.4vw,36px);max-width:10em}.hero .t p{font-size:14px}.hero .t .btn{width:100%;text-align:center}
+  .rail{gap:10px}.rail .pc{flex-basis:calc((100% - 20px)/2.4)}.ch2{margin-top:30px}
+  .w{padding:0 14px}.pn{font-size:14px;min-height:2.6em}.pr{font-size:15px}
+  .ov{padding:0;align-items:flex-end}.md{max-height:96vh;border-radius:14px 14px 0 0}
+  .pg{grid-template-columns:1fr;padding:16px 16px 90px;gap:16px}
+  .fm .name-row{grid-template-columns:1fr}
+  .pay-cards{grid-template-columns:1fr}
+  .sb{display:flex;position:sticky;bottom:0;left:0;right:0;gap:12px;align-items:center;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:var(--bg);border-top:1px solid var(--line);z-index:4}
+  .sb b{white-space:nowrap}.sb .big{padding:13px}
+  .fg{grid-template-columns:1fr;gap:26px}.op{padding:20px 14px 28px}
+  .fm input,.fm select,.fm textarea,.sr input,.hl input{font-size:16px}.oh{grid-template-columns:48px 1fr auto}.stp span{font-size:11px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ===== category nav: one line, single-list dropdown ===== */
+.nv{flex-wrap:nowrap}
+.sd button{white-space:nowrap;justify-content:flex-start;font-size:14px;padding:10px 14px;transition:background .15s,color .15s,padding .15s}
+.sd button:hover,.sd button:focus-visible{background:var(--red);color:#fff;font-weight:500;padding-left:20px}
+.sd button{animation:sdin .3s cubic-bezier(.2,.8,.2,1) both}
+.sd button:nth-child(2){animation-delay:.04s}.sd button:nth-child(3){animation-delay:.08s}.sd button:nth-child(4){animation-delay:.12s}.sd button:nth-child(5){animation-delay:.16s}.sd button:nth-child(6){animation-delay:.2s}.sd button:nth-child(7){animation-delay:.24s}
+@keyframes sdin{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.nd.shut .sd{display:none!important}
+.nd:nth-last-child(-n+3) .sd{left:auto;right:0}
+@media (max-width:1100px){.nv{overflow-x:auto;scrollbar-width:none}.nv::-webkit-scrollbar{display:none}.nd{position:static}.nd:nth-last-child(-n+3) .sd{left:0;right:auto}.sd{left:0;right:auto;min-width:210px;max-width:270px;max-height:62vh;overflow:auto}}
+/* ===== bigger, nicer product images ===== */
+@media (min-width:1101px){.rail .pc{flex-basis:calc((100% - 42px)/4)}}
+@media (max-width:1100px){.rail .pc{flex-basis:calc((100% - 28px)/3)}}
+@media (max-width:760px){.rail .pc{flex-basis:calc((100% - 10px)/2.15)}}
+.pc{background:var(--bg);border:1px solid var(--line);box-shadow:0 8px 22px rgba(0,0,0,.07)}
+.pc:hover{box-shadow:0 22px 44px rgba(0,0,0,.2)}
+.im{aspect-ratio:1/1}
+.im img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}.pc:hover .im img{transform:scale(1.08)}
+.im svg{width:46%}
+.pi{padding:14px 16px 16px}.pn{font-size:16px;font-weight:600}.pr{font-size:18px}
+.rw{grid-template-columns:96px 1fr auto;gap:16px;padding:14px 0}
+.rm{width:96px;border-radius:16px;box-shadow:0 6px 16px rgba(0,0,0,.14)}.rm .im{aspect-ratio:1}
+@media (max-width:700px){.rw{grid-template-columns:76px 1fr auto;gap:12px}.rm{width:76px}}
+@media (prefers-reduced-motion:reduce){.sd button{animation:none}}
+
+/* ===== black order buttons ===== */
+.ob span{background:#111;color:#fff;box-shadow:0 8px 20px rgba(0,0,0,.35)}
+.pc .o2{background:#111;border-color:#111;color:#fff}
+.pc .o2:hover{background:#000;color:#fff;filter:none;box-shadow:0 8px 18px rgba(0,0,0,.35)}
+.rw .btn{background:#111;color:#fff}.rw .btn:hover{background:#000;filter:none}
+
+/* ===== order form: full name, Pay Online dropdown ===== */
+.pay-cards{grid-template-columns:1fr 1fr}
+.pay-menu{display:grid;gap:6px;margin:8px 0;padding:8px;border:1px solid var(--line);border-radius:12px;background:var(--bg);box-shadow:0 10px 24px rgba(0,0,0,.12);animation:sdin .25s both}
+.pay-menu[hidden]{display:none}
+.pm-i{text-align:left;padding:11px 14px;border-radius:8px;font-weight:600;border:1px solid var(--line);transition:background .15s,color .15s}
+.pm-i:hover,.pm-i.on{background:#111;color:#fff;border-color:#111}
+
+/* ===== product card info + mobile order button ===== */
+.inf{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 10px;font-size:12px}
+.inf span{padding:3px 9px;border-radius:999px;background:var(--card);border:1px solid var(--line);white-space:nowrap}
+.inf .sv{background:rgba(22,163,74,.14);color:#16a34a;border-color:rgba(22,163,74,.35);font-weight:600}
+.inf .cdt{display:inline-flex;gap:4px;padding:4px 8px}.inf .cdt i{width:12px;height:12px;border-radius:50%;border:1px solid rgba(0,0,0,.25)}
+@media (hover:none){.ob span{opacity:1;transform:none;padding:9px;font-size:13px;margin:0 8px 8px;width:calc(100% - 16px)}}
+
+/* ===== black Add to cart, Order now rises on hover ===== */
+.pc .a{background:#111;color:#fff;border-color:#111;box-shadow:0 0 0 1px rgba(255,255,255,.1)}
+.pc .a:hover{background:#000;color:#fff;transform:translateY(-1px);box-shadow:0 8px 18px rgba(0,0,0,.35)}
+.ob span{transform:translateY(36px);transition:opacity .3s,transform .4s cubic-bezier(.2,.9,.3,1.25)}
+.pc:hover .ob span{opacity:1;transform:translateY(-8px)}
+
+/* Full-page order view */
+.ov.page{display:none;background:var(--bg);padding:0;overflow:auto;align-items:stretch;backdrop-filter:none;z-index:70}
+.ov.page.on{display:block}
+.ov.page .md{width:min(1100px,100%)!important;max-width:none!important;max-height:none!important;margin:0 auto;border-radius:0!important;box-shadow:none!important;background:transparent!important;overflow:visible!important;padding:0 18px 40px;animation:none}
+.ov.page .x{display:none}
+.pgbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;margin-bottom:18px;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;background:var(--bg)}
+.pgbar .logo{pointer-events:none}
+.pgbar .back{background:none;border:0;font:600 15px inherit;font-family:inherit;color:var(--ink);cursor:pointer;padding:8px 4px}
+</style>
+</head>
+<body>
+<header id="hd"><div class="w hb">
+<a class="logo" href="#top" aria-label="gadgets">
+  <!-- Minimalist Orange & Black Motion Cart Brand Mark -->
+  <svg class="lm-svg" viewBox="200 205 960 600" aria-hidden="true"><defs><linearGradient id="gd0" gradientUnits="userSpaceOnUse" x1="200" y1="500" x2="1000" y2="600"><stop offset="0" stop-color="#ffa000"/><stop offset="1" stop-color="#ff5a00"/></linearGradient></defs><ellipse cx="825" cy="776" rx="218" ry="11" fill="#d9d9d9"/><path fill="#12151d" d="M1151 216H787C680 216 610 270 585 350L692 545 880 508C770 520 665 475 665 410 665 345 715 301 787 301H1078Z"/><path fill="#12151d" d="M840 368H1110C1135 368 1148 388 1141 412L1070 578C1050 615 1020 638 985 638H700L1055 448H763Z"/><path fill="url(#gd0)" d="M410 325H520C540 325 552 337 560 352L680 568 1050 467 1005 567C998 582 988 590 975 592L725 638 660 646C645 648 633 640 627 625L510 385C505 376 500 374 492 374H410C396 374 387 363 387 350 387 336 396 325 410 325Z"/><g fill="url(#gd0)"><rect x="297" y="440" width="220" height="30" rx="15"/><rect x="210" y="500" width="332" height="31" rx="15"/><rect x="333" y="561" width="242" height="31" rx="15"/></g><circle cx="732" cy="704" r="47" fill="#12151d"/><circle cx="939" cy="704" r="47" fill="#12151d"/></svg>
+  <span>gadgets</span>
+</a>
+<form class="sr" id="sf"><input id="q" placeholder="Search for products, brands and more" autocomplete="off"><button type="button" class="sc" id="scb" aria-label="Scan"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M4 8V6a2 2 0 0 1 2-2h2M16 4h2a2 2 0 0 1 2 2v2M20 16v2a2 2 0 0 1-2 2h-2M8 20H6a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/></svg><i class="ln"></i></button><button class="sg" aria-label="Search"><svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button></form>
+<div class="hi">
+<div class="ac"><button id="ab" aria-label="Account"><svg width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c1-4 4-6 8-6s7 2 8 6"/></svg><span id="an">Sign in</span></button><div class="dd" id="dd"></div></div>
+<button id="wb" aria-label="Watchlist"><svg width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><span class="hl2">Watchlist</span><b id="wc" style="display:none">0</b></button>
+<button id="cb" aria-label="Cart"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 4h2l2.4 11h10.2L20 7H6"/><circle cx="9" cy="19" r="1.4"/><circle cx="17" cy="19" r="1.4"/></svg><span class="hl2">Cart</span><b id="cc" style="display:none">0</b></button>
+</div>
+<!-- Home followed directly by 7 main categories; each opens a straight vertical dropdown directly beneath it -->
+<nav class="nv" id="nv"></nav>
+</div></header>
+
+<section class="hero" id="top">
+<div class="sl on"><div class="bg" style="background:linear-gradient(120deg,#0b0b0e,#18181f 60%,#2e1608);--g:rgba(255,106,0,.5)"></div><div class="w t"><h1>Sound that moves with you.</h1><p>Bluetooth speakers, TWS earbuds and headphones for every budget.</p><a class="btn" href="#cat-A">Shop Audio</a></div></div>
+<div class="sl"><div class="bg" style="background:linear-gradient(120deg,#0a0c11,#111c28 60%,#12303f);--g:rgba(79,176,216,.45)"></div><div class="w t"><h1>High-capacity power. Anytime.</h1><p>Magnetic, fast-charging, 20,000mAh–30,000mAh power banks &amp; router UPS.</p><a class="btn" href="#cat-PB">Shop Power Banks</a></div></div>
+<div class="sl"><div class="bg" style="background:linear-gradient(120deg,#0d0b09,#1c1610 60%,#33210f);--g:rgba(255,138,43,.45)"></div><div class="w t"><h1>Shop today. Pay at your door.</h1><p>Cash on delivery across Bangladesh at gadgets.net.bd.</p><a class="btn" href="#shop">Start Shopping</a></div></div>
+<div class="dots"><i class="on"></i><i></i><i></i></div>
+<button class="hn pv" aria-label="Previous">&lsaquo;</button><button class="hn nx" aria-label="Next">&rsaquo;</button></section>
+
+<main class="w" id="shop"></main>
+
+<footer><div class="w">
+<div class="fg">
+<div>
+  <div class="fl">
+    <svg width="56" height="35" viewBox="200 205 960 600" aria-hidden="true"><defs><linearGradient id="gd56" gradientUnits="userSpaceOnUse" x1="200" y1="500" x2="1000" y2="600"><stop offset="0" stop-color="#ffa000"/><stop offset="1" stop-color="#ff5a00"/></linearGradient></defs><ellipse cx="825" cy="776" rx="218" ry="11" fill="#d9d9d9"/><path fill="#12151d" d="M1151 216H787C680 216 610 270 585 350L692 545 880 508C770 520 665 475 665 410 665 345 715 301 787 301H1078Z"/><path fill="#12151d" d="M840 368H1110C1135 368 1148 388 1141 412L1070 578C1050 615 1020 638 985 638H700L1055 448H763Z"/><path fill="url(#gd56)" d="M410 325H520C540 325 552 337 560 352L680 568 1050 467 1005 567C998 582 988 590 975 592L725 638 660 646C645 648 633 640 627 625L510 385C505 376 500 374 492 374H410C396 374 387 363 387 350 387 336 396 325 410 325Z"/><g fill="url(#gd56)"><rect x="297" y="440" width="220" height="30" rx="15"/><rect x="210" y="500" width="332" height="31" rx="15"/><rect x="333" y="561" width="242" height="31" rx="15"/></g><circle cx="732" cy="704" r="47" fill="#12151d"/><circle cx="939" cy="704" r="47" fill="#12151d"/></svg>
+    <span>gadgets</span>
+  </div>
+  <p style="margin-top:14px;color:#5b6070;max-width:26em">Gadgets delivered across Bangladesh<br>gadgets.net.bd</p>
+  <div class="so">
+    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" style="width:40px;height:40px;fill:#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+    <a href="#" aria-label="WhatsApp" style="background:#25D366"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+    <a href="#" aria-label="TikTok" style="background:#000;border:1px solid #444"><svg viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+    <a href="#" aria-label="Instagram" style="background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7)"><svg viewBox="0 0 24 24" style="fill:none;stroke:#fff;stroke-width:2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" style="fill:#fff;stroke:none"/></svg></a>
+  </div>
+</div>
+<div><h4>Shop</h4><ul><li><a href="#cat-A">Audio</a></li><li><a href="#cat-PB">Power Banks</a></li><li><a href="#cat-C">Charging &amp; Cables</a></li><li><a href="#cat-L">Smart Lighting</a></li><li><a href="#cat-W">Smartwatches &amp; Wearables</a></li><li><a href="#cat-M">Mobile &amp; Creator</a></li><li><a href="#cat-G">Cameras &amp; Lifestyle</a></li></ul></div>
+<div><h4>Customer Care</h4><ul><li><a href="#">Track Order</a></li><li><a href="#">Return &amp; Refund</a></li><li><a href="#">FAQ</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li></ul></div>
+<div><h4>Support</h4><button type="button" class="hc" id="hcb"><b>Help Center</b><span>Chat with us, 24/7 support</span></button><a href="mailto:smayanhosan@gmail.com">smayanhosan@gmail.com</a></div>
+</div>
+<div class="cp"><span>&copy; 2026 gadgets (gadgets.net.bd). All rights reserved.</span><span>gadgets.net.bd</span></div>
+</div></footer>
+
+<div class="ov" id="ov"><div class="md" id="md"></div></div>
+<div class="ov" id="hv"><div class="md hl"><button type="button" class="x" data-close aria-label="Close">&times;</button>
+<h3>Help Center</h3><div class="msgs" id="ms"><p>Hello! Welcome to gadgets (gadgets.net.bd). Ask me about any gadget, price, delivery, payment, returns or your order, in English or Bangla.</p></div>
+<form id="hf"><input id="hi" placeholder="Type your question" autocomplete="off"><button type="submit" class="btn" style="padding:12px 20px">Send</button></form></div></div>
+<div class="tst" id="ts"></div>
+
+<script>
+const $=s=>document.querySelector(s),T=n=>"\u09F3"+n.toLocaleString("en-US");
+const esc=x=>String(x==null?"":x).replace(/[<>&"]/g,"");
+
+/* =========================================================================
+   EASY EDIT CONFIGURATION (CFG)
+   Edit brand name, domain, WhatsApp number, delivery fees, logo, and
+   bKash / Nagad payment numbers right here.
+   ========================================================================= */
+const CFG={
+  name:"gadgets",
+  domain:"gadgets.net.bd",
+  wa:"8801905444700",
+  social:{facebook:"",instagram:"",tiktok:"",telegram:""},
+  dhaka:60,
+  outside:120,
+  free:5000,
+  fb:{apiKey:"",authDomain:"",projectId:"",appId:""}, /* paste Firebase web config here (public by design) */
+  logo:"",
+  pay:{
+    bKash:"01911019223",
+    Nagad:"01911019223"
+  }
+};
+
+/* Product Color Options (no clothing sizes) */
+const COLORS=[
+  {name:"Black",hex:"#18181d"},
+  {name:"White",hex:"#f5f5f7"},
+  {name:"Midnight Blue",hex:"#1e3a8a"},
+  {name:"Orange",hex:"#ff6a00"}
+];
+
+/* =========================================================================
+   7 MAIN CATEGORIES & STRAIGHT SINGLE-LEVEL SUB-CATEGORIES
+   Each appears directly in the nav bar with its own vertical dropdown underneath.
+   ========================================================================= */
+const CATS={
+  A:["Audio",{S:"Bluetooth Speakers",E:"TWS Earbuds",H:"Headphones"}],
+  PB:["Power Banks",{M:"Magnetic Power Banks",F:"Fast Charging Power Banks",H:"High Capacity (20,000mAh+)",U:"Mini UPS & Combo Power"}],
+  C:["Charging & Cables",{F:"Fast Adapters & Docks",P:"Charge Protectors & Cables"}],
+  L:["Smart Lighting",{R:"Galaxy & Night Lights",D:"Desk & Table Lights"}],
+  W:["Smartwatches",{W:"Smartwatches"}],
+  M:["Mobile & Creator",{C:"Phone Coolers",T:"Tripods & Selfie Sticks",S:"Mics, Stands & Mounts"}],
+  G:["Cameras & Lifestyle",{D:"Drones & Kids Cameras",V:"Security & VR",H:"Humidifiers & Quran Players",T:"Trimmers & Lifestyle"}]
+};
+const CN=Object.fromEntries(Object.entries(CATS).map(([k,v])=>[k,v[0]]));
+CN.T="Trending Now";
+
+/* =========================================================================
+   PRODUCTS DATASET
+   Format: MainCatKey|SubCatCodeWithOptional!ForTrending|Product Name|Price (BDT)
+   ========================================================================= */
+/* PRICES ARE PLACEHOLDER ESTIMATES - replace with your reseller price + margin. Last field = old price (auto discount 10-35%). */
+const RAW=`
+A|S!|HF-F226 Portable Stereo Woofer Speaker|1490|1820
+A|S|HF-F121 Wireless Bluetooth Speaker|990|1430
+A|S!|HM-805 RGB Bluetooth Speaker|1590|1790
+A|S!|Xtreme P192 RGB Waterproof Speaker|1890|2150
+A|S|Boombox 4 Mini Wireless Speaker|1790|2180
+A|S|BOOMBOX P193 Bluetooth Speaker|1690|1920
+A|S|AWEI KA14 Bass Speaker 6W|1590|1990
+A|S|Hoco MMJ07 Portable Speaker|1390|1960
+A|S|LED Touch Speaker|1190|1830
+A|E!|X46 RGB Gaming Earbuds IPX5|1290|1700
+A|E|B72-B True Wireless Earbuds|790|1050
+A|E|X37 Mecha Gaming Earbuds|1190|1430
+A|E|Q69 Luxury Earbuds Mini Bag Design|1390|1780
+A|E|Q65 Wireless Bluetooth Earbuds|890|1310
+A|E|CYXG Q102 3-in-1 Earbuds Bluetooth 6.1|1690|1940
+A|E!|Hoco EQ34 Plus ANC+ENC Earbuds|2490|3320
+A|E|Q10 HiFi Sports Earbuds 2 Pairs Combo|1490|1860
+A|E|RECRSI RE-HG24 ANC Gaming Earbuds|1890|2220
+A|E|Plextone RX3 Plus Type-C Gaming Earbuds|1590|2450
+A|E!|K8 Sport Wireless Earbuds|790|1140
+A|E!|Labubu 2-in-1 Earbuds & Watch Strap Set|1790|2560
+A|E|Labubu Doll Wireless Earbuds Set|1290|1900
+A|H|P9 Plus Bluetooth Headphone|990|1190
+A|H|RX3 Pro Type-C Gaming Headphones|1290|1740
+PB|M|Hoco J160B 20000mAh Magnetic Power Bank|3290|3700
+PB|F!|Hoco MMJ15 Resolute 22.5W 10000mAh|1990|2460
+PB|F|VEN-DENS VD-PB058 10000mAh Power Bank|1490|2070
+PB|F|VEN-DENS VD-PB041 10000mAh Power Bank|1390|1990
+PB|F|Smart 10000mAh Power Bank Built-in Cables|1590|1790
+PB|H!|VEN-DENS VD-PB059 20000mAh Power Bank|2390|2880
+PB|H|VEN-DENS VD-PB062 30000mAh Power Bank|3290|3740
+PB|H|Hoco MMJ14 20000mAh Dual Output|2690|3540
+PB|U|MARSRIVA ET3 8400mAh Mini Router UPS|1890|2200
+C|F|GS1 Gaming 60W Adapter Type-C & 3.5mm|1290|1650
+C|P|Type-C Auto Power Cutoff Charge Protector|390|510
+L|R|2-in-1 Galaxy Star Projector Night Light|990|1190
+L|D|Raizel 3-in-1 Desk Lamp with Power Bank|2290|2790
+L|D|Yage T109 Rechargeable Touch Table Lamp|1190|1550
+L|D|KD300 Eye Protection Night Light|790|1180
+L|D|Butterfly LED Table Lamp|1290|1870
+W|W!|BW17 Smart Watch with Camera & SIM|3490|4650
+W|W!|S10 Max AMOLED NFC Smart Watch|3990|6140
+M|C!|S38 Icy Magnetic Mobile Cooler|1290|1740
+M|C|EAGET X20SA Mobile Phone Cooler|1190|1570
+M|C|MEMO CX10 Magnetic RGB Phone Cooler|1590|2060
+M|C!|MEMO CX20 RGB Magnetic Phone Cooler|1690|2490
+M|C|TL07 Magnetic Back-clip Phone Cooler|1190|1510
+M|C|PIVA B3 25W Gaming Cooling Fan|1390|1990
+M|C|MEMO CX07 Mobile Cooling Radiator|1290|1900
+M|T|Plokama LIVE-K9 Pro 1700mm Selfie Tripod|2490|3830
+M|T|Plokama Live-M5 Pro 3-in-1 Tripod Stick|1390|2070
+M|T|NeePho NP-L6S Selfie Stick LED Light|1690|2380
+M|S!|NeePho NP-58 Wireless Lavalier Mic|1490|1750
+M|S|NeePho NP-63 Collar Clip Mic Type-C & Lightning|1190|1750
+M|S|Hands-Free Magnetic Neck Phone Holder|790|910
+M|S|Plokama CX10 Chest Strap Phone Mount|690|910
+M|S|4-in-1 Magnetic Device Stand|890|1290
+M|S|NO.X3 Foldable Laptop Stand Twin Fans|1490|2070
+G|D!|D30 Foldable GPS Drone Dual 4K Camera|5990|7780
+G|D|GT50 Smart Foldable Camera Drone|3490|4310
+G|D|E88 AIR Foldable Camera Drone|2290|3370
+G|D|E99 Foldable Drone with Screen Remote|3290|4450
+G|D|E88 MAX Foldable Drone with Camera|2990|3320
+G|D|Children's Fun Camera|1290|1770
+G|D|Children's Instant Print Rabbit Camera|2290|2630
+G|D|Kids Instant Print Camera 32GB + 6 Rolls|3290|4330
+G|D|DIY Instant Digital Kids Camera|2490|3720
+G|D|Kids Digital Camera 2.4 inch IPS|1690|2490
+G|V|WiFi Panorama Bulb Camera|1490|1800
+G|V|Shinecon G18EB 3D VR Glasses|1490|1800
+G|V|SHINECON G18 Virtual Reality Glasses|1290|1540
+G|H|USB Mini Humidifier Colorful LED|590|820
+G|H|Digibook Muslim Zikir Plug-in Speaker|1290|1570
+G|H|Smart Quranic Al Quran Player|2490|3720
+G|T|Kemei KM-6637 4-in-1 Lady Shaver & Trimmer|1490|1730
+G|T|Kemei KM-3018 Women's Cordless Shaver|1390|1720
+G|T|4-in-1 Rechargeable Lady Shaver Kit|1290|1740
+G|T|3-in-1 Women's Razor & Eyebrow Trimmer|990|1500
+G|T|Kemei KM-3024 4-in-1 Shaver & Nose Trimmer Set|1590|2060
+G|T!|KEZU KH-1055 Professional Hair Clipper|1590|2370
+G|T|HL-999 Transparent Hair Clipper|1490|2220
+G|T|Kemei KM-039 Professional Hair Clipper|1390|1990
+G|T|Kemei KM-1550 Professional Hair Clipper|1490|2010
+G|T|HTC AT-179 Hair Clipper & Beard Trimmer|1290|1930
+G|T|VGR V987 Rosso Beard Trimmer|1490|2130
+G|T|Waterproof Women's Dual-Head Hair Remover|1190|1630
+G|T|5-in-1 Multifunctional Beauty Kit MS-8377|1390|1560
+G|T|Inchant Mini Bicycle Foot Pumper|590|680
+G|T|20-in-1 Multifunctional Cleaning Brush|390|450
+`;
+
+const P=RAW.trim().split("\n").map(l=>{
+  const [cat,subFlag,name,price,old]=l.split("|");
+  const isTrend=subFlag.includes("!")?1:0;
+  const sub=subFlag.replace("!","");
+  return [name,+price,+old||0,cat,"",sub,isTrend,name];
+});
+
+/* Optional products.json & localStorage overrides + #admin edit mode */
+let OV={};try{const x=new XMLHttpRequest();x.open("GET","products.json",false);x.send();if(x.status===200)OV=JSON.parse(x.responseText)}catch(e){}
+let LO={};try{LO=JSON.parse(localStorage.getItem("ar_ov")||"{}")}catch(e){}
+P.forEach(p=>{const o=Object.assign({},OV[p[7]],LO[p[7]]);if(o.n)p[0]=o.n;if(o.p!=null&&o.p!=="")p[1]=+o.p;if(o.o!=null)p[2]=+o.o||0;if(o.im)p[4]=o.im;p[8]=(Array.isArray(o.cl)?o.cl:String(o.cl||"").split(",")).map(x=>String(x).trim()).filter(Boolean)});
+
+let ADM=false; /* old hard-coded #admin password removed (it was visible in page source) */
+
+if(CFG.logo){
+  document.querySelectorAll(".lm-svg").forEach(e=>{
+    const imgEl=document.createElement("img");
+    imgEl.className="lm";imgEl.src=CFG.logo;imgEl.alt=CFG.name;
+    e.replaceWith(imgEl);
+  });
+  document.querySelector('link[rel=icon]').href=CFG.logo;
+}
+
+/* Build Main Category Rails (#cat-T, #cat-A, #cat-PB, ...) */
+const sec=(k,t)=>`<section class="cat" id="cat-${k}"><div class="ch2"><h2 class="h">${t}</h2><div class="ctl"><button type="button" class="va" data-c="${k}">View all</button></div></div><div class="rwp"><button type="button" class="rb l" data-s="-1" aria-label="Previous">&lsaquo;</button><div class="rail" data-c="${k}"></div><button type="button" class="rb r" data-s="1" aria-label="Next">&rsaquo;</button></div></section>`;
+$("#shop").innerHTML=sec("T",CN.T)+Object.keys(CATS).map(k=>sec(k,CN[k])).join("");
+const inC=(i,c)=>c==="T"?P[i][6]===1:P[i][3]===c;
+
+const glyph='<svg viewBox="0 0 120 100"><path d="M94 14H63c-17 0-28 11-28 26s11 26 28 26h24l-4 14H51c-5 0-8-3-10-8L31 42H18" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><path d="M63 41h27l-6 23H46l-9-28H24" fill="none" stroke="#ff9e44" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="51" cy="88" r="6" fill="#fff"/><circle cx="77" cy="88" r="6" fill="#fff"/></svg>';
+const img=(i,v=0)=>{if(P[i][4])return `<div class="im"><img src="${P[i][4]}" alt="" loading="lazy"></div>`;const h=(i*37+v*28)%360;return `<div class="im" style="background:linear-gradient(${135+v*40}deg,hsl(${h} 58% 54%),hsl(${(h+36)%360} 64% 32%))">${glyph}</div>`};
+const disc=p=>p[2]>p[1]?Math.round((1-p[1]/p[2])*100):0;
+const card=(p,i)=>`<div class="pc" tabindex="0" data-i="${i}"><div class="pcw">${img(i)}${disc(p)?`<span class="dc">-${disc(p)}%</span>`:""}<button type="button" class="hw" data-w="${i}" aria-label="Watchlist"><svg viewBox="0 0 24 24" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></button><div class="ob"><span>Order now</span></div>${ADM?`<button type="button" class="ed" data-ed="${i}">Edit</button>`:""}</div><div class="pi"><div class="pn">${esc(p[0])}</div><div class="pr">${T(p[1])}${p[2]?`<s>${T(p[2])}</s>`:""}</div><div class="inf">${p[2]>p[1]?`<span class="sv">Save ${T(p[2]-p[1])}</span>`:""}<span class="cd">Cash on Delivery</span>${(p[8]||[]).length?`<span class="cdt">${p[8].slice(0,5).map(c=>`<i style="background:${hexOf(c)}" title="${esc(c)}"></i>`).join("")}</span>`:""}</div><div class="ba"><button type="button" class="a" data-cart="${i}">Add to cart</button></div></div></div>`;
+
+const cols=$("#shop");let dr=null,hold=0;
+const rails=[...document.querySelectorAll(".rail")].map(r=>{
+  const h=P.map((p,i)=>i).filter(i=>inC(i,r.dataset.c)).map(i=>card(P[i],i)).join("");
+  r.innerHTML=h+h;
+  const o={r,x:0,p:0};
+  r.onmouseenter=()=>o.p=1;r.onmouseleave=()=>o.p=0;
+  r.addEventListener("touchstart",()=>hold=1e15,{passive:true});
+  r.addEventListener("touchend",()=>hold=performance.now()+3000,{passive:true});
+  r.addEventListener("touchcancel",()=>hold=performance.now()+3000,{passive:true});
+  r.addEventListener("wheel",()=>hold=performance.now()+2500,{passive:true});
+  r.addEventListener("pointerdown",e=>{if(e.pointerType==="mouse")dr={x:e.clientX,m:0,r}});
+  return o;
+});
+
+const rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+(function loop(){
+  const t=performance.now();
+  rails.forEach(o=>{
+    const r=o.r,half=r.scrollWidth/2;
+    if(!half)return;
+    if(rm||o.p||t<hold){o.x=r.scrollLeft;return}
+    o.x+=.6;
+    if(o.x>=half)o.x-=half;
+    if(o.x<1)o.x+=half;
+    r.scrollLeft=o.x;
+  });
+  requestAnimationFrame(loop);
+})();
+
+addEventListener("pointermove",e=>{if(dr){const d=e.clientX-dr.x;dr.x=e.clientX;dr.m+=Math.abs(d);dr.r.scrollLeft-=d}});
+addEventListener("pointerup",()=>setTimeout(()=>dr=null,0));
+
+document.addEventListener("click",e=>{
+  const a=e.target.closest("[data-s]");
+  if(a){const r=a.closest(".cat").querySelector(".rail");hold=performance.now()+1500;r.scrollBy({left:a.dataset.s*r.clientWidth*.8,behavior:"smooth"})}
+  const v=e.target.closest(".va");
+  if(v)listP(CN[v.dataset.c],P.map((p,i)=>i).filter(i=>inC(i,v.dataset.c)));
+});
+
+const toast=m=>{const t=$("#ts");t.textContent=m;t.classList.add("on");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("on"),2000)};
+
+cols.addEventListener("click",e=>{
+  if(dr&&dr.m>6)return;
+  const w=e.target.closest("[data-w]");if(w){e.stopPropagation();toggleW(+w.dataset.w);return}
+  const b=e.target.closest("[data-cart]");if(b){e.stopPropagation();addCart(+b.dataset.cart);return}
+  const c=e.target.closest(".pc");if(c)openP(+c.dataset.i);
+});
+cols.addEventListener("keydown",e=>{if(e.key==="Enter"){const c=e.target.closest(".pc");if(c)openP(+c.dataset.i)}});
+
+/* =========================================================================
+   IN-PAGE ORDER & CHECKOUT MODAL
+   - Quantity (- / +) & Color selection (no clothing sizes)
+   - First Name & Last Name, Phone Number, Full Address, Delivery Area
+   - Non-dropdown payment selection cards: Cash on Delivery, bKash, Nagad
+   ========================================================================= */
+let cur=0,qty=1,color=COLORS[0].name,area=CFG.dhaka,payMethod="COD",zoneN="Inside Dhaka";
+
+const CHEX={black:"#18181d",white:"#f5f5f7",red:"#e11d2a",blue:"#2563eb","midnight blue":"#1e3a8a",green:"#16a34a",pink:"#ec4899",purple:"#7c3aed",orange:"#ff6a00",yellow:"#facc15",silver:"#c0c4cc",gold:"#d4a537",gray:"#8a8f98",grey:"#8a8f98",brown:"#7c4a2d",beige:"#e8d9bf",navy:"#1e2a5a",teal:"#0d9488"};
+const hexOf=n=>CHEX[String(n).toLowerCase()]||"#9aa0a6";
+const colorPickerHTML=()=>{const cl=P[cur][8]||[];return cl.length?`
+  <label>Color</label>
+  <div class="clr-list" id="clr-list">
+    ${cl.map(c=>`<button type="button" class="clr-btn ${color===c?"on":""}" data-clr="${esc(c)}"><span class="clr-dot" style="background:${hexOf(c)}"></span><span>${esc(c)}</span></button>`).join("")}
+  </div>`:""};
+
+const deliverySelectorHTML=(idPrefix="")=>`
+  <label>Delivery area</label>
+  <div class="zone-list" id="${idPrefix}zone-list">
+    <button type="button" class="zone-btn ${zoneN==="Inside Dhaka"?"on":""}" data-z="${CFG.dhaka}" data-zn="Inside Dhaka">Inside Dhaka (${T(CFG.dhaka)})</button>
+    <button type="button" class="zone-btn ${zoneN==="Outside Dhaka"?"on":""}" data-z="${CFG.outside}" data-zn="Outside Dhaka">Outside Dhaka (${T(CFG.outside)})</button>
+  </div>`;
+
+const paymentSelectorHTML=()=>`
+  <label>Payment method</label>
+  <div class="pay-cards" id="pay-cards" style="grid-template-columns:1fr">
+    <button type="button" class="pay-opt on" data-pm="COD"><strong>Cash on Delivery</strong><small>Pay at door</small></button>
+  </div>`;
+
+function syncPaymentUI(){
+  const box=$("#pay-detail");
+  if(!box)return;
+  const online=payMethod!=="COD";
+  document.querySelectorAll("#pay-cards .pay-opt").forEach(b=>b.classList.toggle("on",b.dataset.pm==="COD"?!online:online));
+  const ps=$("#pay-sub");if(ps)ps.textContent=online?payMethod:"bKash / Nagad";
+  document.querySelectorAll("#pay-menu .pm-i").forEach(b=>b.classList.toggle("on",b.dataset.pm===payMethod));
+  if(payMethod==="COD"){
+    box.hidden=true;
+    return;
+  }
+  box.hidden=false;
+  const num=CFG.pay[payMethod]||"01XXXXXXXXX";
+  $("#pay-inst").textContent=`Send total via ${payMethod} to:`;
+  $("#pay-shop-num").textContent=num;
+  const sInp=$("#psender"),tInp=$("#ptrx");
+  if(sInp)sInp.previousElementSibling.textContent=`Your ${payMethod} sender number (optional)`;
+  if(tInp)tInp.placeholder=`Enter ${payMethod} TrxID (optional)`;
+}
+
+function bindOrderControls(onRecalc){
+  document.querySelectorAll("#clr-list .clr-btn").forEach(b=>{
+    b.onclick=()=>{
+      color=b.dataset.clr;
+      document.querySelectorAll("#clr-list .clr-btn").forEach(x=>x.classList.toggle("on",x===b));
+    };
+  });
+  document.querySelectorAll("[id$=zone-list] .zone-btn").forEach(b=>{
+    b.onclick=()=>{
+      area=+b.dataset.z;zoneN=b.dataset.zn;
+      document.querySelectorAll("[id$=zone-list] .zone-btn").forEach(x=>x.classList.toggle("on",x===b));
+      onRecalc();
+    };
+  });
+  const pmenu=$("#pay-menu");
+  document.querySelectorAll("#pay-cards .pay-opt").forEach(b=>{
+    b.onclick=()=>{
+      if(b.dataset.pm==="PAY"){pmenu.hidden=!pmenu.hidden;b.setAttribute("aria-expanded",String(!pmenu.hidden));return}
+      payMethod="COD";syncPaymentUI();
+    };
+  });
+  document.querySelectorAll("#pay-menu .pm-i").forEach(b=>{
+    b.onclick=()=>{payMethod=b.dataset.pm;pmenu.hidden=true;syncPaymentUI()};
+  });
+  const cp=$("#cp-pay-num");
+  if(cp)cp.onclick=()=>{
+    const txt=$("#pay-shop-num").textContent.trim();
+    const ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();
+    try{document.execCommand("copy");toast("Copied "+txt)}catch(e){}
+    ta.remove();
+  };
+}
+
+function openP(i){
+  const p=P[i];cur=i;qty=1;color=(p[8]||[])[0]||"";area=CFG.dhaka;zoneN="Inside Dhaka";payMethod="COD";
+  $("#md").innerHTML=`<button type="button" class="x" data-close aria-label="Close">&times;</button>
+  <div class="pg">
+    <div>
+      <div class="zm" id="zm">${img(i,0)}</div>
+      <div class="th">${(p[4]?[0]:[0,1,2]).map(v=>`<button type="button" data-v="${v}" class="${v?"":"on"}">${img(i,v)}</button>`).join("")}</div>
+    </div>
+    <div class="fm">
+      <h3 style="font:800 24px Montserrat,sans-serif">${esc(p[0])}</h3>
+      <div style="font-size:22px;font-weight:700;margin-top:6px">${T(p[1])} ${p[2]>p[1]?`<s style="font-size:15px;color:var(--mut);font-weight:400">${T(p[2])}</s> <span class="dc" style="position:static;vertical-align:middle">-${disc(p)}%</span>`:""}</div>
+      ${colorPickerHTML()}
+      <label>Quantity (Pieces)</label>
+      <div class="qt"><button type="button" id="qm">&minus;</button><span id="qv">1</span><button type="button" id="qp">+</button></div>
+      <label>Full name</label><input id="ffn" placeholder="Full name" autocomplete="name">
+      <label>Phone number</label><input id="fp" type="tel" inputmode="numeric" placeholder="01XXXXXXXXX" autocomplete="tel">
+      <label>Full address</label><textarea id="fa" rows="2" placeholder="House, road, area, district"></textarea>
+      ${deliverySelectorHTML("p-")}
+      ${paymentSelectorHTML()}
+      <div class="sm"><div><span>Subtotal</span><span id="s1"></span></div><div><span>Delivery</span><span id="s2"></span></div><div class="tt"><span>Total</span><span id="s3"></span></div></div>
+      <button type="button" class="big" id="go">Confirm Order</button>
+      <p class="nt">Cash on delivery. 7-day easy return on ${esc(CFG.domain)}.</p>
+    </div>
+  </div>
+  <div class="sb"><b id="sbt"></b><button type="button" class="big" id="go2">Confirm Order</button></div>`;
+  openOv();pgOn();calc();bindOrderControls(calc);
+  const zm=$("#zm");zm.onmousemove=e=>{const r=zm.getBoundingClientRect();zm.firstChild.style.transformOrigin=`${(e.clientX-r.left)/r.width*100}% ${(e.clientY-r.top)/r.height*100}%`};
+  document.querySelectorAll(".th button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".th button").forEach(x=>x.classList.remove("on"));b.classList.add("on");zm.innerHTML=img(i,+b.dataset.v)});
+  $("#qm").onclick=()=>{qty=Math.max(1,qty-1);calc()};
+  $("#qp").onclick=()=>{qty=Math.min(20,qty+1);calc()};
+  $("#go").onclick=$("#go2").onclick=submit;
+  tr($("#md"));
+}
+
+function calc(){
+  const sub=P[cur][1]*qty,dl=sub>=CFG.free?0:area;
+  $("#qv").textContent=qty;$("#s1").textContent=T(sub);$("#s2").textContent=dl?T(dl):"Free";$("#s3").textContent=T(sub+dl);$("#sbt").textContent=T(sub+dl);
+}
+
+function buildPaymentSummary(){
+  if(payMethod==="COD")return "Cash on Delivery";
+  const snd=($("#psender")?.value||"").trim();
+  const trx=($("#ptrx")?.value||"").trim();
+  const extras=[snd?`From: ${snd}`:"",trx?`TrxID: ${trx}`:""].filter(Boolean).join(", ");
+  return extras?`${payMethod} (${extras})`:payMethod;
+}
+
+function done(fullName,phone,itemsSummary,total,paySummary,address){
+  const msg=`New Order — ${CFG.name} (${CFG.domain})\nCustomer: ${fullName}\nPhone: ${phone}\nAddress: ${address}\nItems: ${itemsSummary}\nTotal: ${T(total)}\nPayment: ${paySummary}`;
+  panel("Order confirmed",`
+    <p class="nt" style="font-size:14.5px;color:var(--ink)">Thank you, <b>${esc(fullName)}</b>. Your order details are ready for Telegram. Please press the Telegram button below to send them.</p>
+    <div class="sm"><div><span>Payment</span><span>${esc(paySummary)}</span></div><div class="tt"><span>Total Payable</span><span>${T(total)}</span></div></div>
+    <a class="btn" style="display:block;text-align:center;margin-top:14px;background:#229ED9" target="_blank" rel="noopener" href="https://t.me/share/url?url=${encodeURIComponent('https://gadgets.net.bd')}&text=${encodeURIComponent(msg)}">Send order details on Telegram</a>
+    <p style="font-size:12px;color:var(--muted);margin-top:8px">Telegram খুলে তোমার নিজের অর্ডার-গ্রুপ বা Saved Messages নির্বাচন করে Send চাপো। অর্ডারটি নিজে থেকে কোথাও যাবে না।</p>
+    <button type="button" class="btn" data-close style="margin-top:12px">Continue shopping</button>
+  `);pgOn();
+}
+
+function orderErr(e){toast(e&&e.code==="permission-denied"?"Order rejected. Please refresh the page and try again.":"Could not place order. Check your internet and try again.")}
+async function submit(){
+  const fn=($("#ffn")?.value||"").trim(),p=($("#fp")?.value||"").trim().replace(/[\s-]/g,""),a=($("#fa")?.value||"").trim();
+  if(!fn||!/^01\d{9}$/.test(p)||a.length<8){toast("Enter full name, 11-digit phone and full address");return}
+  const pr=P[cur],sub=pr[1]*qty,dl=sub>=CFG.free?0:area,tot=sub+dl,bt=[$("#go"),$("#go2")];
+  bt.forEach(b=>b.disabled=true);
+  try{await placeOrder([{name:pr[0],color:color||"",qty,price:pr[1]}],sub,dl,fn,p,a)}
+  catch(e){bt.forEach(b=>b.disabled=false);orderErr(e);return}
+  orders.unshift({id:String(Date.now()).slice(-7),d:new Date().toLocaleDateString("en-GB"),n:`${pr[0]}${color?` [${color}]`:""}`,q:qty,i:cur,s:0,sz:color,t:tot});
+  sv("au_o",orders);renderAcc();
+  done(fn,p,`${pr[0]}${color?` (${color})`:""} x${qty}`,tot,"Cash on Delivery",a);
+}
+
+const pgOn=()=>{$("#ov").classList.add("page");if(location.hash!=="#order")history.pushState(null,"","#order");if(!$("#md .pgbar"))$("#md").insertAdjacentHTML("afterbegin",`<div class="pgbar"><span class="logo">${$(".logo").innerHTML}</span><button type="button" class="back" data-close>&larr; Back to shop</button></div>`);$("#ov").scrollTop=0};
+addEventListener("popstate",()=>{if(location.hash!=="#order")closeAll()});
+const closeAll=()=>{["ov","hv"].forEach(k=>$("#"+k).classList.remove("on"));$("#ov").classList.remove("page");document.body.style.overflow="";if(location.hash==="#order")history.replaceState(null,"",location.pathname+location.search)};
+document.addEventListener("click",e=>{if(e.target.closest("[data-close]")||(e.target.classList.contains("ov")&&!e.target.classList.contains("page")))closeAll()});
+addEventListener("keydown",e=>{if(e.key==="Escape")closeAll()});
+
+/* 24/7 Help Center Chat */
+$("#hcb").onclick=()=>{$("#hv").classList.add("on")};
+const EM="smayanhosan@gmail.com";
+const SV=[
+[/deliver|shipping|dhaka|ডেলিভারি|ঢাকা/,`Delivery is ${CFG.dhaka} taka inside Dhaka and ${CFG.outside} taka outside Dhaka. Orders of ${CFG.free.toLocaleString("en-US")} taka or above get free delivery.`,`ডেলিভারি চার্জ ঢাকার ভেতরে ${CFG.dhaka} টাকা, ঢাকার বাইরে ${CFG.outside} টাকা। ${CFG.free} টাকা বা তার বেশির অর্ডারে ডেলিভারি ফ্রি।`],
+[/pay|bkash|nagad|cash|cod|পেমেন্ট|বিকাশ|নগদ/,"We accept Cash on Delivery. No sign in needed.","আমরা ক্যাশ অন ডেলিভারি গ্রহণ করি। সাইন ইন লাগবে না।"],
+[/return|refund|exchange|warranty|রিটার্ন|ওয়ারেন্টি/,"We accept returns within 7 days if the gadget is unused and in original condition. Warranty differs by product, so message us the product name to confirm.","পণ্য অব্যবহৃত ও আসল অবস্থায় থাকলে ৭ দিনের মধ্যে রিটার্ন নেওয়া হয়। ওয়ারেন্টি পণ্যভেদে আলাদা, তাই পণ্যের নাম জানিয়ে নিশ্চিত হয়ে নিন।"],
+[/order|track|status|cancel|অর্ডার|ট্র্যাক/,`After you order, we call to confirm. For order help or cancellation, email ${EM}.`,`অর্ডার করার পর আমরা ফোন করে কনফার্ম করি। অর্ডার বা বাতিলের জন্য ${EM}-এ ইমেইল করুন।`],
+[/discount|offer|sale|ছাড়|অফার/,"Every product shows its discounted price with the old price crossed out. Prices are in taka.","প্রতিটি পণ্যে ছাড়ের দাম ও কাটা পুরনো দাম দেখানো আছে। দাম টাকায়।"],
+[/contact|phone|whatsapp|email|যোগাযোগ|হোয়াটসঅ্যাপ/,`Email us at ${EM}${CFG.wa?" or message us on WhatsApp +"+CFG.wa:""}.`,`ইমেইল করুন ${EM}${CFG.wa?" অথবা হোয়াটসঅ্যাপ করুন +"+CFG.wa:""}।`]];
+const AD=[
+[/mah|battery life|how many charge/,"A 10,000mAh power bank charges most phones about 1.5 to 2 times, and 20,000mAh about 3 to 4 times, since some energy is lost in conversion. Airlines usually allow up to 100Wh (about 27,000mAh) in cabin bags, so check your airline."],
+[/earbud|tws|earphone|anc|enc|neckband/,"For earbuds, look for Bluetooth 5.3 or newer, a low-latency gaming mode if you play games, ANC for noise reduction and ENC for clearer calls. Neckbands usually last longer per charge."],
+[/watch|amoled|nfc/,"For smartwatches, AMOLED screens are brighter and sharper, Bluetooth calling needs a paired phone, and SIM watches work on their own. Check the water-resistance rating if you will sweat or swim."],
+[/drone/,"Foldable camera drones suit short-range flying in open areas. Keep them away from crowds and sensitive places, and check local rules before flying."],
+[/speaker/,"For speakers, check the wattage, playtime and water-resistance rating. RGB models are for fun, larger woofer models give deeper bass."],
+[/cooler|cooling|pubg|free fire|gaming/,"Phone coolers help during long gaming sessions by lowering the back-plate temperature. Magnetic ones are quick to attach, clip-on ones fit any phone case."],
+[/tripod|mic|vlog|selfie|creator/,"For vlogging, a tripod with a Bluetooth remote and a wireless lavalier mic give the biggest quality jump. Type-C and Lightning versions of the mic exist, so match your phone."],
+[/trimmer|clipper|shaver|razor/,"Clean the blades after each use and oil them occasionally. Rechargeable models are easiest to travel with."],
+[/hello|hi\b|hey|thanks|thank/,"Hello! Ask me about any gadget, price, delivery, payment or returns."]];
+const STOP=new Set("the for and with price how much what you have any buy best good cost does can show your are tell about need want get please".split(" "));
+function ans(q){
+  const l=q.toLowerCase(),bn=/[\u0980-\u09FF]/.test(q);
+  const k=SV.find(x=>x[0].test(l));if(k)return bn&&k[2]?k[2]:k[1];
+  const tk=(l.match(/[a-z0-9\-]{3,}/g)||[]).filter(t=>!STOP.has(t)),mx=(l.match(/(?:under|below|within|budget|max)\D{0,6}(\d{3,5})/)||[])[1];
+  let r=tk.length?P.map((p,i)=>({i,s:tk.filter(t=>p[0].toLowerCase().includes(t)||(CN[p[3]]||"").toLowerCase().includes(t)).length})).filter(x=>x.s&&(!mx||P[x.i][1]<=+mx)).sort((a,b)=>b.s-a.s||P[a.i][1]-P[b.i][1]).slice(0,3):[];
+  if(!r.length&&mx)r=P.map((p,i)=>i).filter(i=>P[i][1]<=+mx).sort((a,b)=>P[b][1]-P[a][1]).slice(0,3).map(i=>({i}));
+  const a=AD.find(x=>x[0].test(l));
+  if(r.length)return "Here are some matches:"+r.map(x=>`<br><button type="button" class="btn" data-o="${x.i}" style="padding:6px 12px;margin:5px 0;text-align:left">${esc(P[x.i][0])} - ${T(P[x.i][1])}</button>`).join("")+(a?"<br>"+a[1]:"");
+  if(a)return a[1];
+  return bn?`দুঃখিত, এটা খুঁজে পাইনি। পণ্যের নাম লিখে দেখুন, অথবা ${EM}-এ ইমেইল করুন।`:`Sorry, I could not find that. Try a product name like "power bank" or "earbuds", or email ${EM}.`;
+}
+$("#ms").addEventListener("click",e=>{const b=e.target.closest("[data-o]");if(b){e.stopPropagation();$("#hv").classList.remove("on");openP(+b.dataset.o)}});
+$("#hf").onsubmit=e=>{
+  e.preventDefault();const q=$("#hi").value.trim();if(!q)return;
+  const m=$("#ms");m.insertAdjacentHTML("beforeend",`<p class="u"></p>`);m.lastChild.textContent=q;$("#hi").value="";
+  setTimeout(()=>{m.insertAdjacentHTML("beforeend","<p></p>");m.lastChild.innerHTML=ans(q);m.scrollTop=m.scrollHeight},350);
+  m.scrollTop=m.scrollHeight;
+};
+
+/* Hero Slider */
+const sl=[...document.querySelectorAll(".sl")],ds=[...document.querySelectorAll(".dots i")];let si=0,tm;
+const show=n=>{sl[si].classList.remove("on");ds[si].classList.remove("on");si=n;sl[si].classList.add("on");ds[si].classList.add("on")};
+const run=()=>{clearInterval(tm);tm=setInterval(()=>show((si+1)%sl.length),6000)};run();
+$(".pv").onclick=()=>{show((si+sl.length-1)%sl.length);run()};
+$(".nx").onclick=()=>{show((si+1)%sl.length);run()};
+let tx=0;const hero=$(".hero");
+hero.addEventListener("touchstart",e=>tx=e.touches[0].clientX,{passive:true});
+hero.addEventListener("touchend",e=>{const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50){show((si+(d<0?1:sl.length-1))%sl.length);run()}},{passive:true});
+
+/* Storage, Bilingual Support & Account */
+const ld=(k,d)=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+let users=ld("au_u",[]),me=ld("au_me",null),orders=ld("au_o",[]),wl=ld("au_w",[]),ci=ld("au_c",[]),lang=ld("au_l","en");
+
+const D={
+  "Home":"হোম","Checkout":"চেকআউট","View all":"সব দেখুন",
+  "Search for products, brands and more":"পণ্য, ব্র্যান্ড ও আরও অনেক কিছু খুঁজুন",
+  "Sign in":"সাইন ইন","Create account":"অ্যাকাউন্ট খুলুন","Orders":"অর্ডার","Watchlist":"ওয়াচলিস্ট","Cart":"কার্ট","Language":"ভাষা","Log out":"লগ আউট",
+  "Trending Now":"এখন ট্রেন্ডিং","Audio":"অডিও","Power Banks":"পাওয়ার ব্যাংক","Charging & Cables":"চার্জার ও ক্যাবল",
+  "Smart Lighting":"স্মার্ট লাইটিং","Smartwatches & Wearables":"স্মার্টওয়াচ ও ওয়্যারেবল","Mobile & Creator":"মোবাইল ও ক্রিয়েটর",
+  "Cameras & Lifestyle":"ক্যামেরা ও লাইফস্টাইল",
+  "Bluetooth Speakers":"ব্লুটুথ স্পিকার","TWS Earbuds":"টিডব্লিউএস ইয়ারবাডস","Headphones & Neckbands":"হেডফোন ও নেকব্যান্ড",
+  "Magnetic Power Banks":"ম্যাগনেটিক পাওয়ার ব্যাংক","Fast Charging Power Banks":"ফাস্ট চার্জিং পাওয়ার ব্যাংক",
+  "High Capacity (20,000mAh+)":"হাই ক্যাপাসিটি (২০,০০০mAh+)","Mini UPS & Combo Power":"মিনি ইউপিএস ও কম্বো পাওয়ার",
+  "Fast Adapters & Docks":"ফাস্ট অ্যাডাপ্টার ও ডক","Charge Protectors & Cables":"চার্জ প্রোটেক্টর ও ক্যাবল",
+  "RGB & Galaxy Lights":"আরজিবি ও গ্যালাক্সি লাইট","Desk & Wall Lights":"ডেস্ক ও ওয়াল লাইট",
+  "Smartwatches":"স্মার্টওয়াচ","Smart Rings & Bands":"স্মার্ট রিং ও ব্যান্ড",
+  "Phone Coolers":"ফোন কুলার","Tripods & Ring Lights":"ট্রাইপড ও রিং লাইট","Mics, Stands & Mounts":"মাইক, স্ট্যান্ড ও মাউন্ট",
+  "Drones & Kids Cameras":"ড্রোন ও কিডস ক্যামেরা","Security & VR":"সিকিউরিটি ও ভিআর",
+  "Humidifiers & Quran Players":"হিউমিডিফায়ার ও কুরআন প্লেয়ার","Trimmers & Lifestyle":"ট্রিমার ও লাইফস্টাইল",
+  "Add to cart":"কার্টে যোগ করুন","Order now":"এখনই অর্ডার করুন","View details":"বিস্তারিত দেখুন","Pay Online":"অনলাইনে পেমেন্ট","Confirm Order":"অর্ডার কনফার্ম করুন","Added to cart":"কার্টে যোগ হয়েছে",
+  "Customer Care":"কাস্টমার কেয়ার","Track Order":"অর্ডার ট্র্যাক","Return & Refund":"রিটার্ন ও রিফান্ড","FAQ":"সাধারণ প্রশ্ন","Privacy Policy":"প্রাইভেসি পলিসি","Terms & Conditions":"শর্তাবলি",
+  "Support":"সাপোর্ট","Help Center":"হেল্প সেন্টার","Chat with us, 24/7 support":"আমাদের সাথে চ্যাট করুন, ২৪/৭ সাপোর্ট",
+  "Quantity (Pieces)":"পরিমাণ (পিস)","Color":"কালার","First name":"নামের প্রথম অংশ","Last name":"নামের শেষ অংশ",
+  "Phone number":"ফোন নম্বর","Full address":"পুরো ঠিকানা","Delivery area":"ডেলিভারি এলাকা","Payment method":"পেমেন্ট মাধ্যম",
+  "Cash on Delivery":"ক্যাশ অন ডেলিভারি","Pay at door":"হাতে পেয়ে পেমেন্ট",
+  "Subtotal":"সাবটোটাল","Delivery":"ডেলিভারি","Total":"মোট","Free":"ফ্রি",
+  "Order confirmed":"অর্ডার কনফার্ম হয়েছে","Continue shopping":"কেনাকাটা চালিয়ে যান",
+  "Your cart is empty.":"আপনার কার্ট খালি।","No orders yet. Your orders will appear here.":"এখনো কোনো অর্ডার নেই।",
+  "Your watchlist is empty. Tap the heart on a product to save it.":"ওয়াচলিস্ট খালি।",
+  "No products found. Try another word.":"কোনো পণ্য পাওয়া যায়নি।",
+  ["Inside Dhaka ("+T(CFG.dhaka)+")"]:"ঢাকার ভেতরে ("+T(CFG.dhaka)+")",
+  ["Outside Dhaka ("+T(CFG.outside)+")"]:"ঢাকার বাইরে ("+T(CFG.outside)+")"
+};
+const DL={bn:D};
+function tr(r){
+  if(!r)return;const L=DL[lang],w=document.createTreeWalker(r,NodeFilter.SHOW_TEXT);let n;
+  while(n=w.nextNode()){
+    if(/^(SCRIPT|STYLE)$/.test(n.parentNode.tagName))continue;
+    if(n._o===undefined){if(!L||!n.nodeValue.trim())continue;n._o=n.nodeValue}
+    const k=n._o.trim(),v=L&&L[k];n.nodeValue=v?n._o.replace(k,v):n._o;
+  }
+  if(r.querySelectorAll)r.querySelectorAll("[placeholder]").forEach(e=>{e.dataset.p=e.dataset.p||e.placeholder;e.placeholder=L&&L[e.dataset.p]||e.dataset.p});
+}
+new MutationObserver(ms=>{if(lang==="en")return;ms.forEach(m=>m.addedNodes.forEach(n=>tr(n.nodeType===1?n:n.parentNode)))}).observe(document.body,{childList:true,subtree:true});
+function setLang(l){lang=l;sv("au_l",l);document.documentElement.lang=l;renderAcc();tr(document.body)}
+
+/* =========================================================================
+   STRAIGHT SINGLE-COLUMN DROPDOWNS UNDER EACH OF THE 7 MAIN CATEGORIES
+   ========================================================================= */
+const nv=$("#nv");
+function subIndices(catKey,subLabel){
+  const map=CATS[catKey][1];
+  const code=Object.keys(map).find(k=>map[k]===subLabel);
+  return P.map((p,i)=>i).filter(i=>p[3]===catKey&&(!code||p[5]===code));
+}
+
+/* ===== NAV CATEGORIES: one line, one dropdown list. Edit names or keywords here ===== */
+const qf=(re,codes)=>i=>{const p=P[i],c=p[3]+p[5];return(!codes||codes.some(x=>c.indexOf(x)===0))&&(!re||re.test(p[0]))};
+const NAV=[
+["Audio",[["True Wireless Earbuds",qf(null,["AE"])],["Neckband",qf(/neckband/i)],["Over-ear Headphones",qf(/headphone/i,["AH"])],["Gaming Headset",qf(/gaming/i,["AE","AH"])],["Bluetooth Speaker",qf(null,["AS"])],["Soundbar",qf(/soundbar/i)],["Microphone",qf(/\bmic\b/i)]]],
+["Smartwatch",[["Calling Smartwatch",qf(/smartwatch/i,["WW"])],["Smart Band",qf(null,["WR"])],["Kids Watch",qf(/kids.*watch/i)],["Watch Strap & Charger",qf(/watch.*(strap|charger)/i)]]],
+["Power & Charging",[["Power Bank",qf(null,["PB"])],["Fast Charger",qf(null,["CF","CP"])],["Cable",qf(/cable/i)],["Wireless Charger",qf(/wireless charg|magsafe/i)],["Car Charger",qf(/car charg/i)]]],
+["Mobile Accessories",[["Back Cover",qf(/cover|case/i)],["Screen Protector",qf(/screen protector/i)],["Phone Holder & Stand",qf(/holder|mount|stand/i,["MS"])],["OTG & Adapter",qf(/otg|adapter/i)],["Memory Card",qf(/memory card|sd card/i)]],qf(null,["MC"])],
+["Creator Gear",[["Action Camera",qf(/action cam/i)],["Gimbal",qf(/gimbal/i)],["Drone",qf(/drone/i,["GD"])],["Tripod & Ring Light",qf(null,["MT"])],["Vlogging Mic",qf(/\bmic\b/i)]],qf(/camera/i,["GD"])],
+["Smart Home",[["WiFi Router",qf(/router/i)],["CC Camera",qf(/camera|recorder/i,["GV"])],["Smart Plug & Bulb",qf(null,["L"])],["TV Box & Stick",qf(/tv box|tv stick/i)],["Starlink & Internet Devices",qf(/starlink|router|extender/i)]],qf(null,["GH"])],
+["Personal Care",[["Trimmer",qf(/trimmer|clipper/i)],["Shaver",qf(/shaver|razor/i)],["Hair Dryer & Straightener",qf(/dryer|straightener/i)],["Electric Toothbrush",qf(/toothbrush/i)],["Massager",qf(/massag/i)]],qf(/hair remover|beauty kit/i)],
+["Gaming",[["Gamepad",qf(/gamepad|controller/i)],["Gaming Mouse & Keyboard",qf(/mouse|keyboard/i)],["Gaming Console",qf(/console/i)],["VR & Projector",qf(/\bVR\b|projector/i)]],qf(/gaming/i)]
+];
+const navIds=(f)=>P.map((p,i)=>i).filter(f);
+const navAll=c=>navIds(i=>c[1].some(t=>t[1](i))||(c[2]&&c[2](i)));
+const navNone="No products in this group yet. Coming soon.";
+nv.innerHTML=`<a href="#top" class="nl">Home</a>`+NAV.map((c,n)=>`<div class="nd" data-n="${n}"><button type="button" class="nl" aria-expanded="false">${c[0]} <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m2 3.5 3 3 3-3"/></svg></button><div class="sd">${c[1].map((t,j)=>`<button type="button" data-i="${j}">${t[0]}</button>`).join("")}</div></div>`).join("");
+const navClose=()=>nv.querySelectorAll(".nd.on").forEach(x=>{x.classList.remove("on");x.querySelector(".nl").setAttribute("aria-expanded","false")});
+nv.addEventListener("click",e=>{
+  const nd=e.target.closest(".nd");if(!nd)return;const c=NAV[+nd.dataset.n],it=e.target.closest("[data-i]");
+  if(it){const t=c[1][+it.dataset.i];navClose();nd.classList.add("shut");listP(`${c[0]} — ${t[0]}`,navIds(t[1]),null,navNone);return}
+  if(e.target.closest(".nl")){
+    if(matchMedia("(hover:hover)").matches){nd.classList.add("shut");listP(c[0],navAll(c),null,navNone);return}
+    const was=nd.classList.contains("on");
+    if(was){navClose();listP(c[0],navAll(c),null,navNone);return}
+    navClose();nd.classList.add("on");nd.querySelector(".nl").setAttribute("aria-expanded","true")}
+});
+nv.addEventListener("mouseout",e=>{const nd=e.target.closest(".nd");if(nd&&!nd.contains(e.relatedTarget))nd.classList.remove("shut")});
+document.addEventListener("click",e=>{if(!e.target.closest(".nd"))navClose()});
+
+/* Panels, Watchlist, Cart & Checkout Modal */
+const openOv=()=>{$("#ov").classList.add("on");document.body.style.overflow="hidden"};
+const panel=(t,b)=>{$("#md").innerHTML=`<button type="button" class="x" data-close aria-label="Close">&times;</button><div class="pn2"><h3>${t}</h3>${b}</div>`;openOv();tr($("#md"))};
+const row=(i,x="")=>`<div class="rw"><div class="rm">${img(i)}</div><div><b>${esc(P[i][0])}</b><div>${T(P[i][1])}</div></div><div class="ra">${x}<button type="button" class="btn" data-o="${i}">Order now</button></div></div>`;
+const listP=(t,ids,x,empty)=>panel(t,ids.length?ids.map(i=>row(i,x?x(i):"")).join(""):`<p class="nt">${empty||"No products found. Try another word."}</p>`);
+
+function upd(){const c=ci.reduce((s,k)=>s+k.q,0);$("#cc").textContent=c;$("#cc").style.display=c?"":"none";$("#wc").textContent=wl.length;$("#wc").style.display=wl.length?"":"none"}
+const syncW=()=>document.querySelectorAll("[data-w]").forEach(b=>b.classList.toggle("on",wl.includes(+b.dataset.w)));
+function toggleW(i){wl=wl.includes(i)?wl.filter(x=>x!==i):[...wl,i];sv("au_w",wl);upd();syncW()}
+function addCart(i){const col=(P[i][8]||[])[0]||"";const e=ci.find(c=>c.i===i&&c.sz===col);e?e.q++:ci.push({i,sz:col,q:1});sv("au_c",ci);upd();toast("Added to cart")}
+const watchP=()=>listP("Watchlist",wl,i=>`<button type="button" class="rx" data-rw="${i}" aria-label="Remove">&times;</button>`,"Your watchlist is empty. Tap the heart on a product to save it.");
+
+const ST=["Order placed","Confirmed","Shipped","Delivered"],oi=o=>o.i!=null?o.i:P.findIndex(p=>p[0]===o.n);
+function ordP(){
+  const have=orders.map(oi),lastI=orders.length?oi(orders[0]):-1,cat=lastI>=0?P[lastI][3]:null;
+  const rel=P.map((p,i)=>i).filter(i=>!have.includes(i)).sort((a,b)=>(P[b][3]===cat)-(P[a][3]===cat)).slice(0,8);
+  const list=orders.length?orders.map((o,k)=>{const j=oi(o),s=o.s||0;return `<div class="oc"><div class="oh"><div class="rm">${img(j>=0?j:0)}</div><div><b>${esc(o.n)} &times;${o.q}${o.sz&&o.sz!=="-"?" ("+esc(o.sz)+")":""}</b><div class="nt" style="margin:2px 0 0">#${o.id} &middot; ${o.d}</div></div><b>${T(o.t)}</b></div><div class="stp">${ST.map((x,n)=>`<span class="${n<=s?"on":""}"><i></i>${x}</span>`).join("")}</div><div class="oa"><span class="nt" style="margin:0">We will call you to confirm.</span><button type="button" class="rx" data-ro="${k}" style="font-size:14px">Remove order</button></div></div>`}).join(""):`<p class="nt">No orders yet. Your orders will appear here.</p>`;
+  $("#md").innerHTML=`<button type="button" class="x" data-close aria-label="Close">&times;</button><div class="op"><h3>Orders</h3>${list}<h4>You may also like</h4><div class="rg">${rel.map(i=>`<div class="mn"><div class="mi">${img(i)}${disc(P[i])?`<span class="dc">-${disc(P[i])}%</span>`:""}</div><div class="pn">${esc(P[i][0])}</div><div class="pr">${T(P[i][1])}${P[i][2]?`<s>${T(P[i][2])}</s>`:""}</div><button type="button" class="a" data-o="${i}">Order now</button></div>`).join("")}</div></div>`;
+  openOv();tr($("#md"));
+}
+
+function cartP(){
+  const tot=ci.reduce((s,c)=>s+P[c.i][1]*c.q,0);
+  $("#md").innerHTML=`<div class="cd"><div class="cdh"><h3>Cart</h3><button type="button" class="x2" data-close aria-label="Close">&times;</button></div><div class="cdb">${ci.length?ci.map((c,k)=>row(c.i,`<button type="button" class="rx" data-rc="${k}" aria-label="Remove">&times;</button>`).replace("</b>",(c.q>1?" &times;"+c.q:"")+(c.sz&&c.sz!=="-"?" ("+esc(c.sz)+")":"")+"</b>")).join(""):`<p class="nt">Your cart is empty.</p>`}</div><div class="cdf"><div class="sm" style="margin:0 0 12px"><div class="tt" style="border:0;margin:0;padding:0"><span>Subtotal</span><span>${T(tot)}</span></div></div><button type="button" class="big" data-co ${ci.length?"":"disabled"}>Checkout</button></div></div>`;
+  openOv();tr($("#md"));
+}
+
+function checkoutP(){
+  const sub=ci.reduce((s,c)=>s+P[c.i][1]*c.q,0);
+  area=CFG.dhaka;zoneN="Inside Dhaka";payMethod="COD";
+  const parts=me&&me.n?me.n.trim().split(/\s+/):[];
+  const fnVal=parts[0]||"",lnVal=parts.slice(1).join(" ")||"";
+  panel("Checkout",`
+    <form class="fm" id="co-form">
+      <label>Full name</label><input id="cfn" required value="${esc(me&&me.n?me.n.trim():"")}" placeholder="Full name" autocomplete="name">
+      <label>Phone number</label><input id="cfp" type="tel" inputmode="numeric" required placeholder="01XXXXXXXXX">
+      <label>Full address</label><textarea id="cfa" rows="2" required placeholder="House, road, area, district"></textarea>
+      ${deliverySelectorHTML("c-")}
+      ${paymentSelectorHTML()}
+      <div class="sm"><div><span>Subtotal</span><span>${T(sub)}</span></div><div><span>Delivery</span><span id="cod"></span></div><div class="tt"><span>Total</span><span id="cot"></span></div></div>
+      <button type="submit" class="big">Confirm Order</button>
+    </form>`);
+  const u=()=>{const d=sub>=CFG.free?0:area;$("#cod").textContent=d?T(d):"Free";$("#cot").textContent=T(sub+d)};
+  u();bindOrderControls(u);
+  $("#co-form").onsubmit=async e=>{
+    e.preventDefault();
+    const fn=$("#cfn").value.trim(),p=$("#cfp").value.trim().replace(/[\s-]/g,""),a=$("#cfa").value.trim();
+    if(!fn||!/^01\d{9}$/.test(p)||a.length<8){toast("Enter full name, 11-digit phone and full address");return}
+    const dl=sub>=CFG.free?0:area,tot=sub+dl,bt=e.target.querySelector(".big");
+    const its=ci.map(c=>({name:P[c.i][0],color:c.sz&&c.sz!=="-"?c.sz:"",qty:c.q,price:P[c.i][1]}));
+    bt.disabled=true;
+    try{await placeOrder(its,sub,dl,fn,p,a)}catch(x){bt.disabled=false;orderErr(x);return}
+    const items=ci.map(c=>`${P[c.i][0]}${c.sz&&c.sz!=="-"?` (${c.sz})`:""} x${c.q}`).join(", ");
+    orders.unshift({id:String(Date.now()).slice(-7),d:new Date().toLocaleDateString("en-GB"),n:ci.length>1?ci.length+" items":P[ci[0].i][0],q:ci.reduce((s,c)=>s+c.q,0),i:ci[0].i,s:0,sz:ci[0].sz||"",t:tot});
+    sv("au_o",orders);renderAcc();ci=[];sv("au_c",ci);upd();
+    done(fn,p,items,tot,"Cash on Delivery",a);
+  };
+}
+
+const gSvg='<svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>';
+function authP(m){
+  const up=m==="up";
+  panel(up?"Create account":"Sign in",`<button type="button" class="gb" data-g>${gSvg}<span>${up?"Sign up with Google":"Continue with Google"}</span></button><div class="or"><span>or</span></div><form class="fm" data-au="${m}">${up?`<label>Full name</label><input name="n" required autocomplete="name">`:""}<label>Phone or email</label><input name="u" required autocomplete="username" placeholder="01XXXXXXXXX / name@email.com"><label>Password</label><div class="pw"><input name="p" type="password" minlength="6" required autocomplete="${up?"new-password":"current-password"}"><button type="button" data-eye>Show</button></div><button type="submit" class="big" style="margin-top:18px">${up?"Create account":"Sign in"}</button></form><p class="nt">${up?"Already have an account?":"New to gadgets?"} <a href="#" data-sw="${up?"in":"up"}" style="color:var(--red)">${up?"Sign in":"Create account"}</a></p>`);
+}
+const login=u=>{me={n:u.n,u:u.u};sv("au_me",me);renderAcc();closeAll();toast("Welcome, "+u.n.split(" ")[0])};
+const normId=u=>{u=u.trim();if(u.includes("@"))return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(u)?u.toLowerCase():null;const d=u.replace(/[\s-]/g,"").replace(/^\+?88/,"");return /^01\d{9}$/.test(d)?d:null};
+async function hp(p){try{const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode("gadgets:"+p));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")}catch(e){return p}}
+
+document.addEventListener("submit",async e=>{
+  const m=e.target.dataset.au;if(!m)return;e.preventDefault();
+  const d=Object.fromEntries(new FormData(e.target)),id=normId(d.u);
+  if(!id){toast("Enter a valid phone number or email");return}
+  const h=await hp(d.p);
+  if(m==="up"){if(users.some(u=>u.u===id)){toast("Account already exists. Please sign in.");return}users.push({n:d.n.trim(),u:id,p:h});sv("au_u",users);login({n:d.n.trim(),u:id})}
+  else{const u=users.find(x=>x.u===id&&x.p===h);if(!u){toast("Wrong phone, email or password");return}login(u)}
+});
+
+function renderAcc(){
+  $("#an").textContent=me?me.n.split(" ")[0]:"Sign in";
+  const L=[["en","English"],["bn","\u09ac\u09be\u0982\u09b2\u09be"]];
+  $("#dd").innerHTML=(me?"":`<button type="button" data-a="in" class="pri">Sign in</button><button type="button" data-a="up">Create account</button><hr>`)+
+    `<button type="button" data-a="ord">Orders${orders.length?` <span class="ch">${orders.length}</span>`:""}</button>`+
+    `<button type="button" data-a="wl">Watchlist</button>`+
+    `<div class="lw"><button type="button" data-a="lg" class="lgb">Language<span>${lang==="bn"?"\u09ac\u09be\u0982\u09b2\u09be":"English"}</span></button><div class="ls">${L.map(([c,n])=>`<button type="button" data-l="${c}" class="${lang===c?"on":""}">${n}</button>`).join("")}</div></div>`+
+    (me?`<hr><button type="button" data-a="out">Log out</button>`:"");
+  tr($("#dd"));
+}
+
+$("#ab").onclick=e=>{e.stopPropagation();$("#dd").classList.toggle("on")};
+document.addEventListener("click",e=>{if(!e.target.closest(".ac"))$("#dd").classList.remove("on")});
+$("#dd").onclick=e=>{
+  const b=e.target.closest("button");if(!b)return;const a=b.dataset.a;
+  if(a==="lg"){b.closest(".lw").classList.toggle("open");return}
+  $("#dd").classList.remove("on");
+  if(b.dataset.l)setLang(b.dataset.l);else if(a==="in"||a==="up")authP(a);else if(a==="ord")ordP();else if(a==="wl")watchP();else if(a==="out"){me=null;sv("au_me",null);renderAcc();toast("Logged out")}
+};
+$("#wb").onclick=watchP;$("#cb").onclick=cartP;
+
+$("#md").addEventListener("click",e=>{
+  const t=e.target;let b;
+  if(b=t.closest("[data-o]"))openP(+b.dataset.o);
+  else if(b=t.closest("[data-co]"))checkoutP();
+  else if(b=t.closest("[data-rc]")){ci.splice(+b.dataset.rc,1);sv("au_c",ci);upd();cartP()}
+  else if(b=t.closest("[data-rw]")){toggleW(+b.dataset.rw);watchP()}
+  else if(b=t.closest("[data-ro]")){orders.splice(+b.dataset.ro,1);sv("au_o",orders);renderAcc();ordP();toast("Order removed")}
+  else if(b=t.closest("[data-sw]")){e.preventDefault();authP(b.dataset.sw)}
+  else if(t.closest("[data-g]"))toast("Google sign-in is not set up yet");
+  else if(b=t.closest("[data-eye]")){const i=b.previousElementSibling,h=i.type==="password";i.type=h?"text":"password";b.textContent=h?"Hide":"Show";tr(b)}
+});
+
+$("#sf").onsubmit=e=>{
+  e.preventDefault();const q=esc($("#q").value.trim()).toLowerCase();if(!q)return;
+  const ids=P.map((p,i)=>i).filter(i=>P[i][0].toLowerCase().includes(q)||(q.length>2&&CN[P[i][3]].toLowerCase().includes(q)));
+  listP("\u201c"+q+"\u201d",ids);
+};
+$("#scb").onclick=()=>panel("Scan a product",`<p class="nt" style="margin:0 0 12px">Take or upload a photo and we will find similar products.</p><label class="btn" style="display:block;text-align:center;cursor:pointer">Choose photo<input type="file" id="sf2" accept="image/*" hidden></label><div id="sr2"></div>`);
+document.addEventListener("change",e=>{
+  if(e.target.id!=="sf2")return;const f=e.target.files[0];if(!f)return;
+  $("#sr2").innerHTML=`<div class="sx" style="margin-top:14px"><img id="si" alt=""><i class="ln2"></i></div>`;const im=$("#si");
+  im.onload=()=>{
+    const c=document.createElement("canvas");c.width=c.height=16;const x=c.getContext("2d");x.drawImage(im,0,0,16,16);const d=x.getContext("2d").getImageData(0,0,16,16).data;let r=0,g=0,bl=0;
+    for(let k=0;k<d.length;k+=4){r+=d[k];g+=d[k+1];bl+=d[k+2]}const n=d.length/4;r/=n;g/=n;bl/=n;const mx=Math.max(r,g,bl),mn=Math.min(r,g,bl);let h=0;
+    if(mx>mn){h=mx===r?((g-bl)/(mx-mn)+6)%6:mx===g?(bl-r)/(mx-mn)+2:(r-g)/(mx-mn)+4;h*=60}
+    const dist=i=>{const z=Math.abs((i*37)%360-h);return Math.min(z,360-z)};const ids=P.map((p,i)=>i).sort((a,b)=>dist(a)-dist(b)).slice(0,4);
+    setTimeout(()=>{$("#sr2").innerHTML=`<p class="nt" style="margin:14px 0 0">Similar products</p>`+ids.map(i=>row(i)).join("")},2000);
+  };
+  im.src=URL.createObjectURL(f);
+});
+
+/* ===== Footer links & social icons ===== */
+(function(){
+  const POL={
+    "Return & Refund":"<p>If a product arrives damaged, defective or different from your order, contact us within 7 days of delivery with your order number and photos. We will arrange a replacement or refund after checking the product.</p><p>Items must be unused and in original packaging. Delivery charges are not refunded unless the mistake was ours.</p>",
+    "FAQ":"<p><b>How do I order?</b><br>Open a product, choose colour and quantity, enter your details and confirm.</p><p><b>Which payment methods are available?</b><br>Cash on delivery.</p><p><b>How long does delivery take?</b><br>Inside Dhaka usually 1 to 2 days, outside Dhaka 2 to 5 days.</p>",
+    "Privacy Policy":"<p>We collect your name, phone number and address only to process and deliver your orders. We do not sell your personal information. Your details are shared only with delivery and payment partners when needed to complete your order.</p>",
+    "Terms & Conditions":"<p>By placing an order you confirm the details you entered are correct. Prices and stock may change without notice. We may cancel an order if the product is unavailable or the details cannot be verified. Warranty and returns follow our Return &amp; Refund policy.</p>"
+  };
+  document.querySelectorAll("footer a").forEach(a=>{
+    const t=a.textContent.trim(),lb=(a.getAttribute("aria-label")||"").toLowerCase();
+    if(lb){
+      let u=lb==="whatsapp"?(CFG.wa?"https://wa.me/"+String(CFG.wa).replace(/\D/g,""):""):(CFG.social||{})[lb]||"";
+      if(u){a.href=u;a.target="_blank";a.rel="noopener"}else a.style.display="none";return;
+    }
+    if(t==="Track Order")a.addEventListener("click",e=>{e.preventDefault();me?ordP():authP("in")});
+    else if(POL[t])a.addEventListener("click",e=>{e.preventDefault();panel(t,'<div class="nt" style="line-height:1.7">'+POL[t]+'</div>')});
+  });
+})();
+
+/* Admin Mode (#admin) */
+document.addEventListener("click",e=>{const b=e.target.closest("[data-ed]");if(b){e.stopPropagation();e.preventDefault();editP(+b.dataset.ed)}},true);
+function editP(i){const p=P[i];panel("Edit product",`<form class="fm" data-ad="${i}"><label>Name</label><input name="n" value="${esc(p[0])}" required><label>Price (taka)</label><input name="p" type="number" inputmode="numeric" min="0" value="${p[1]}" required><label>Old price (optional, shows a discount)</label><input name="o" type="number" inputmode="numeric" min="0" value="${p[2]||""}"><label>Image URL or path (example: img/p1.jpg)</label><input name="im" value="${p[4]&&!p[4].startsWith("data:")?esc(p[4]):""}"><label>Colors (optional, comma separated, leave empty if none)</label><input name="cl" value="${esc((p[8]||[]).join(", "))}" placeholder="Black, White, Blue"><label>Or upload a photo</label><input type="file" id="adf" accept="image/*"><button type="submit" class="big" style="margin-top:18px">Save</button></form>`)}
+const saveLO=()=>{try{localStorage.setItem("ar_ov",JSON.stringify(LO));return true}catch(e){toast("Storage full. Use an image path instead of uploading.");return false}};
+document.addEventListener("submit",e=>{
+  const i=e.target.dataset.ad;if(i==null)return;e.preventDefault();
+  const d=Object.fromEntries(new FormData(e.target)),f=$("#adf").files[0],k=P[i][7];
+  const fin=im=>{LO[k]={n:d.n.trim(),p:+d.p,o:+d.o||0,im:im||d.im.trim(),cl:(d.cl||"").trim()};if(saveLO())location.reload()};
+  if(!f){fin("");return}
+  const r=new FileReader();r.onload=()=>{const m=new Image();m.onload=()=>{const c=document.createElement("canvas"),z=Math.min(1,600/Math.max(m.width,m.height));c.width=m.width*z;c.height=m.height*z;c.getContext("2d").drawImage(m,0,0,c.width,c.height);fin(c.toDataURL("image/jpeg",.7))};m.src=r.result};r.readAsDataURL(f);
+});
+if(ADM){
+  const b=document.createElement("div");b.className="adb";b.innerHTML='<span>Admin</span><button type="button" id="ax">Export products.json</button><button type="button" id="ai">Import</button><button type="button" id="ar0">Reset edits</button><button type="button" id="ao">Exit</button><input type="file" id="aif" accept=".json" hidden>';document.body.appendChild(b);
+  $("#ax").onclick=()=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(Object.assign({},OV,LO),null,1)],{type:"application/json"}));a.download="products.json";a.click()};
+  $("#ai").onclick=()=>$("#aif").click();$("#aif").onchange=e=>{const r=new FileReader();r.onload=()=>{try{Object.assign(LO,JSON.parse(r.result));if(saveLO())location.reload()}catch(x){toast("Not a valid products.json")}};r.readAsText(e.target.files[0])};
+  $("#ar0").onclick=()=>{try{localStorage.removeItem("ar_ov");location.reload()}catch(x){}};
+  $("#ao").onclick=()=>{try{sessionStorage.removeItem("ar_adm")}catch(e){}location.hash="";location.reload()};
+}
+if(CFG.wa){const w=document.createElement("a");w.className="wf";w.href="https://wa.me/"+CFG.wa;w.target="_blank";w.rel="noopener";w.textContent="WhatsApp";document.body.appendChild(w);const l=document.querySelector('[aria-label="WhatsApp"]');if(l)l.href=w.href}
+
+/* Telegram share-based order flow: no database or Firebase required. */
+async function placeOrder(items,sub,dl,name,phone,addr){
+  // The order details are shared by the customer through Telegram after confirmation.
+  return true;
+}
+
+upd();syncW();setLang(lang);
+</script>
+</body>
+</html>
